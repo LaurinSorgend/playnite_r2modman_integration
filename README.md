@@ -20,15 +20,6 @@ Output: `src\PlayniteR2modman\bin\Debug\`.
 
 Playnite → **Settings → For developers → External extensions** → add the `bin\Debug` folder → restart Playnite.
 
-## Settings
-
-**Settings → Extensions → r2modman Launch Options**:
-
-- **Enable injection globally** — master switch.
-- **Only show modded launch options when at least one profile exists** — hides entries for games you haven't set up yet.
-- **r2modman data folder override** — empty = `%AppData%\r2modmanPlus-local`.
-- **User mapping overrides** — add a Steam AppId → r2modman folder row for any game not in the bundled list, or tick `Disabled` to suppress one.
-- **Scan r2modman folder** / **Reload mappings now** — helpers.
 
 ## Adding games
 
