@@ -26,10 +26,13 @@ jobs:
         shell: bash
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
-      - name: Set up Python
-        uses: https://code.forgejo.org/actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      - name: Install Python
+        shell: bash
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install -y python3 python3-pip
+          ln -sf /usr/bin/python3 /usr/local/bin/python
 
       - name: Run extractor
         run: python scripts/update_game_mappings.py
