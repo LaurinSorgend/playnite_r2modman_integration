@@ -1,0 +1,62 @@
+<UserControl x:Class="PlayniteR2modman.PlayniteR2modmanSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="700">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <CheckBox Content="Enable injection globally"
+                      IsChecked="{Binding Settings.EnableInjection}"
+                      Margin="0,4"/>
+            <CheckBox Content="Only show modded launch options when at least one profile exists"
+                      IsChecked="{Binding Settings.OnlyShowWhenProfileExists}"
+                      Margin="0,4"/>
+
+            <TextBlock Text="r2modman data folder override (leave empty for default %AppData%\r2modmanPlus-local):"
+                       Margin="0,12,0,4"/>
+            <TextBox Text="{Binding Settings.DataFolderOverride, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,0,0,8"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,4,0,4">
+                <Button Content="Scan r2modman folder"
+                        Command="{Binding ScanCommand}"
+                        Margin="0,0,8,0" Padding="8,4"/>
+                <Button Content="Reload mappings now"
+                        Command="{Binding ReloadCommand}"
+                        Padding="8,4"/>
+            </StackPanel>
+            <TextBlock Text="{Binding ScanStatus}" TextWrapping="Wrap" Margin="0,0,0,12" FontStyle="Italic"/>
+
+            <TextBlock Text="User mapping overrides (Steam AppId → r2modman folder name):"
+                       FontWeight="Bold" Margin="0,12,0,4"/>
+            <TextBlock Text="Add entries here for games not in the bundled list, or to override an existing one. Tick 'Disabled' to suppress injection for that AppId."
+                       TextWrapping="Wrap" FontStyle="Italic" Margin="0,0,0,4"/>
+
+            <DataGrid x:Name="MappingsGrid"
+                      ItemsSource="{Binding Settings.UserMappings}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      MinHeight="120">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Steam AppId" Binding="{Binding SteamAppId}" Width="120"/>
+                    <DataGridTextColumn Header="r2modman folder" Binding="{Binding R2modmanInternalName}" Width="200"/>
+                    <DataGridTextColumn Header="Display name" Binding="{Binding DisplayName}" Width="*"/>
+                    <DataGridCheckBoxColumn Header="Disabled" Binding="{Binding IsDisabled}" Width="80"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                <Button Content="Add row"
+                        Command="{Binding AddMappingCommand}"
+                        Margin="0,0,8,0" Padding="8,4"/>
+                <Button Content="Remove selected"
+                        Command="{Binding RemoveMappingCommand}"
+                        CommandParameter="{Binding ElementName=MappingsGrid, Path=SelectedItem}"
+                        Padding="8,4"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

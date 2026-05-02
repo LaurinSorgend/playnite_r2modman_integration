@@ -1,0 +1,7 @@
+﻿Id: PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1
+Name: r2modman Launch Options
+Author: Laurin Sorgend
+Version: 0.1.0
+Module: PlayniteR2modman.dll
+Type: GenericPlugin
+Icon: icon.png

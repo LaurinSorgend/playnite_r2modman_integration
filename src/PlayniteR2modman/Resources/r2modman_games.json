@@ -1,0 +1,947 @@
+[
+  {
+    "steamAppId": "227860",
+    "r2modmanInternalName": "CastleStory",
+    "displayName": "Castle Story"
+  },
+  {
+    "steamAppId": "233610",
+    "r2modmanInternalName": "Distance",
+    "displayName": "Distance"
+  },
+  {
+    "steamAppId": "252870",
+    "r2modmanInternalName": "PulsarLostColony",
+    "displayName": "Pulsar: Lost Colony"
+  },
+  {
+    "steamAppId": "264710",
+    "r2modmanInternalName": "Subnautica",
+    "displayName": "Subnautica"
+  },
+  {
+    "steamAppId": "268750",
+    "r2modmanInternalName": "Magicite",
+    "displayName": "Magicite"
+  },
+  {
+    "steamAppId": "283160",
+    "r2modmanInternalName": "HOTDS",
+    "displayName": "House of the Dying Sun"
+  },
+  {
+    "steamAppId": "311690",
+    "r2modmanInternalName": "ETG",
+    "displayName": "Enter the Gungeon"
+  },
+  {
+    "steamAppId": "384490",
+    "r2modmanInternalName": "Necropolis",
+    "displayName": "Necropolis"
+  },
+  {
+    "steamAppId": "386940",
+    "r2modmanInternalName": "UltimateChickenHorse",
+    "displayName": "Ultimate Chicken Horse"
+  },
+  {
+    "steamAppId": "440310",
+    "r2modmanInternalName": "ProjectArrhythmia",
+    "displayName": "Project Arrhythmia"
+  },
+  {
+    "steamAppId": "445980",
+    "r2modmanInternalName": "WizardOfLegend",
+    "displayName": "Wizard of Legend"
+  },
+  {
+    "steamAppId": "450540",
+    "r2modmanInternalName": "H3VR",
+    "displayName": "H3VR"
+  },
+  {
+    "steamAppId": "477160",
+    "r2modmanInternalName": "HumanFallFlat",
+    "displayName": "Human Fall Flat"
+  },
+  {
+    "steamAppId": "493520",
+    "r2modmanInternalName": "GTFO",
+    "displayName": "GTFO"
+  },
+  {
+    "steamAppId": "508440",
+    "r2modmanInternalName": "TABS",
+    "displayName": "TABS"
+  },
+  {
+    "steamAppId": "519860",
+    "r2modmanInternalName": "DUSK",
+    "displayName": "DUSK"
+  },
+  {
+    "steamAppId": "527230",
+    "r2modmanInternalName": "ForTheKing",
+    "displayName": "For The King"
+  },
+  {
+    "steamAppId": "553310",
+    "r2modmanInternalName": "LethalLeagueBlaze",
+    "displayName": "Lethal League Blaze"
+  },
+  {
+    "steamAppId": "577690",
+    "r2modmanInternalName": "SpookysJumpScareMansionHdRenovation",
+    "displayName": "Spooky's Jump Scare Mansion: HD Renovation"
+  },
+  {
+    "steamAppId": "580720",
+    "r2modmanInternalName": "CarrierDeck",
+    "displayName": "Carrier Deck"
+  },
+  {
+    "steamAppId": "597220",
+    "r2modmanInternalName": "WestofLoathing",
+    "displayName": "West of Loathing"
+  },
+  {
+    "steamAppId": "598060",
+    "r2modmanInternalName": "SlashersKeep",
+    "displayName": "Slasher's Keep"
+  },
+  {
+    "steamAppId": "605230",
+    "r2modmanInternalName": "GreyHack",
+    "displayName": "Grey Hack"
+  },
+  {
+    "steamAppId": "619540",
+    "r2modmanInternalName": "Darkwater",
+    "displayName": "Darkwater"
+  },
+  {
+    "steamAppId": "622650",
+    "r2modmanInternalName": "BendyAndTheInkMachine",
+    "displayName": "Bendy and the Ink Machine"
+  },
+  {
+    "steamAppId": "632360",
+    "r2modmanInternalName": "RiskOfRain2",
+    "displayName": "Risk of Rain 2"
+  },
+  {
+    "steamAppId": "632470",
+    "r2modmanInternalName": "DiscoElysium",
+    "displayName": "Disco Elysium"
+  },
+  {
+    "steamAppId": "636480",
+    "r2modmanInternalName": "Ravenfield",
+    "displayName": "Ravenfield"
+  },
+  {
+    "steamAppId": "653530",
+    "r2modmanInternalName": "ObraDinn",
+    "displayName": "Return of the Obra Dinn"
+  },
+  {
+    "steamAppId": "667970",
+    "r2modmanInternalName": "VTOL_VR",
+    "displayName": "VTOL VR"
+  },
+  {
+    "steamAppId": "688420",
+    "r2modmanInternalName": "BadNorth",
+    "displayName": "Bad North"
+  },
+  {
+    "steamAppId": "720620",
+    "r2modmanInternalName": "TaleSpire",
+    "displayName": "TaleSpire"
+  },
+  {
+    "steamAppId": "757320",
+    "r2modmanInternalName": "Atomicrops",
+    "displayName": "Atomicrops"
+  },
+  {
+    "steamAppId": "794260",
+    "r2modmanInternalName": "Outward",
+    "displayName": "Outward"
+  },
+  {
+    "steamAppId": "843390",
+    "r2modmanInternalName": "Vertigo2",
+    "displayName": "Vertigo 2"
+  },
+  {
+    "steamAppId": "848450",
+    "r2modmanInternalName": "SubnauticaBZ",
+    "displayName": "Subnautica: Below Zero"
+  },
+  {
+    "steamAppId": "867210",
+    "r2modmanInternalName": "SongsOfConquest",
+    "displayName": "Songs of Conquest"
+  },
+  {
+    "steamAppId": "892970",
+    "r2modmanInternalName": "Valheim",
+    "displayName": "Valheim"
+  },
+  {
+    "steamAppId": "896660",
+    "r2modmanInternalName": "Valheim",
+    "displayName": "Valheim"
+  },
+  {
+    "steamAppId": "900010",
+    "r2modmanInternalName": "MeepleStation",
+    "displayName": "Meeple Station"
+  },
+  {
+    "steamAppId": "945360",
+    "r2modmanInternalName": "AmongUs",
+    "displayName": "Among Us"
+  },
+  {
+    "steamAppId": "949230",
+    "r2modmanInternalName": "CitiesSkylines2",
+    "displayName": "Cities: Skylines II"
+  },
+  {
+    "steamAppId": "986130",
+    "r2modmanInternalName": "ShadowsofDoubt",
+    "displayName": "Shadows of Doubt"
+  },
+  {
+    "steamAppId": "1022980",
+    "r2modmanInternalName": "Ostranauts",
+    "displayName": "Ostranauts"
+  },
+  {
+    "steamAppId": "1030300",
+    "r2modmanInternalName": "HollowKnightSilksong",
+    "displayName": "Hollow Knight: Silksong"
+  },
+  {
+    "steamAppId": "1054340",
+    "r2modmanInternalName": "LogicWorld",
+    "displayName": "Logic World"
+  },
+  {
+    "steamAppId": "1059990",
+    "r2modmanInternalName": "TromboneChamp",
+    "displayName": "Trombone Champ"
+  },
+  {
+    "steamAppId": "1062090",
+    "r2modmanInternalName": "Timberborn",
+    "displayName": "Timberborn"
+  },
+  {
+    "steamAppId": "1063420",
+    "r2modmanInternalName": "VoidCrew",
+    "displayName": "Void Crew"
+  },
+  {
+    "steamAppId": "1085510",
+    "r2modmanInternalName": "GarfieldKartFuriousRacing",
+    "displayName": "Garfield Kart - Furious Racing"
+  },
+  {
+    "steamAppId": "1091320",
+    "r2modmanInternalName": "DEPO",
+    "displayName": "DEPO : Death Epileptic Pixel Origins"
+  },
+  {
+    "steamAppId": "1092790",
+    "r2modmanInternalName": "Inscryption",
+    "displayName": "Inscryption"
+  },
+  {
+    "steamAppId": "1125390",
+    "r2modmanInternalName": "AtrioTheDarkWild",
+    "displayName": "Atrio: The Dark Wild"
+  },
+  {
+    "steamAppId": "1129310",
+    "r2modmanInternalName": "Receiver2",
+    "displayName": "Receiver 2"
+  },
+  {
+    "steamAppId": "1140150",
+    "r2modmanInternalName": "TouhouLostBranchOfLegend",
+    "displayName": "Touhou: Lost Branch of Legend"
+  },
+  {
+    "steamAppId": "1147560",
+    "r2modmanInternalName": "SkulTheHeroSlayer",
+    "displayName": "Skul: The Hero Slayer"
+  },
+  {
+    "steamAppId": "1150530",
+    "r2modmanInternalName": "WizardWithAGun",
+    "displayName": "Wizard with a Gun"
+  },
+  {
+    "steamAppId": "1150760",
+    "r2modmanInternalName": "Gloomwood",
+    "displayName": "Gloomwood"
+  },
+  {
+    "steamAppId": "1170230",
+    "r2modmanInternalName": "BelowTheStone",
+    "displayName": "Below the Stone"
+  },
+  {
+    "steamAppId": "1180760",
+    "r2modmanInternalName": "RiskOfRain2",
+    "displayName": "Risk of Rain 2"
+  },
+  {
+    "steamAppId": "1188080",
+    "r2modmanInternalName": "CatsAreLiquidABP",
+    "displayName": "Cats are Liquid - A Better Place"
+  },
+  {
+    "steamAppId": "1188930",
+    "r2modmanInternalName": "ChronoArk",
+    "displayName": "Chrono Ark"
+  },
+  {
+    "steamAppId": "1205040",
+    "r2modmanInternalName": "GrannyChapterTwo",
+    "displayName": "Granny: Chapter Two"
+  },
+  {
+    "steamAppId": "1210320",
+    "r2modmanInternalName": "PotionCraft",
+    "displayName": "Potion Craft"
+  },
+  {
+    "steamAppId": "1226990",
+    "r2modmanInternalName": "Mechanica",
+    "displayName": "Mechanica"
+  },
+  {
+    "steamAppId": "1229490",
+    "r2modmanInternalName": "ULTRAKILL",
+    "displayName": "ULTRAKILL"
+  },
+  {
+    "steamAppId": "1242980",
+    "r2modmanInternalName": "KeyWe",
+    "displayName": "KeyWe"
+  },
+  {
+    "steamAppId": "1268900",
+    "r2modmanInternalName": "NearlyDead",
+    "displayName": "Nearly Dead"
+  },
+  {
+    "steamAppId": "1279510",
+    "r2modmanInternalName": "ScrewDrivers",
+    "displayName": "Screw Drivers"
+  },
+  {
+    "steamAppId": "1284190",
+    "r2modmanInternalName": "ThePlanetCrafter",
+    "displayName": "The Planet Crafter"
+  },
+  {
+    "steamAppId": "1296610",
+    "r2modmanInternalName": "Peglin",
+    "displayName": "Peglin"
+  },
+  {
+    "steamAppId": "1310330",
+    "r2modmanInternalName": "GoodbyeVolcanoHigh",
+    "displayName": "Goodbye Volcano High"
+  },
+  {
+    "steamAppId": "1313140",
+    "r2modmanInternalName": "COTL",
+    "displayName": "Cult of the Lamb"
+  },
+  {
+    "steamAppId": "1326470",
+    "r2modmanInternalName": "SonsOfTheForest",
+    "displayName": "Sons Of The Forest"
+  },
+  {
+    "steamAppId": "1330000",
+    "r2modmanInternalName": "StolenRealm",
+    "displayName": "Stolen Realm"
+  },
+  {
+    "steamAppId": "1335830",
+    "r2modmanInternalName": "LensIsland",
+    "displayName": "Len's Island"
+  },
+  {
+    "steamAppId": "1336490",
+    "r2modmanInternalName": "AgainstTheStorm",
+    "displayName": "Against the Storm"
+  },
+  {
+    "steamAppId": "1353230",
+    "r2modmanInternalName": "BombRushCyberfunk",
+    "displayName": "Bomb Rush Cyberfunk"
+  },
+  {
+    "steamAppId": "1366540",
+    "r2modmanInternalName": "DysonSphereProgram",
+    "displayName": "Dyson Sphere Program"
+  },
+  {
+    "steamAppId": "1380220",
+    "r2modmanInternalName": "Starsand",
+    "displayName": "Starsand"
+  },
+  {
+    "steamAppId": "1385380",
+    "r2modmanInternalName": "AcrossTheObelisk",
+    "displayName": "Across the Obelisk"
+  },
+  {
+    "steamAppId": "1409160",
+    "r2modmanInternalName": "Plasma",
+    "displayName": "Plasma"
+  },
+  {
+    "steamAppId": "1414850",
+    "r2modmanInternalName": "NASB",
+    "displayName": "Nickelodeon All‑Star Brawl"
+  },
+  {
+    "steamAppId": "1432860",
+    "r2modmanInternalName": "SunHaven",
+    "displayName": "Sun Haven"
+  },
+  {
+    "steamAppId": "1447350",
+    "r2modmanInternalName": "ArcusChroma",
+    "displayName": "Arcus Chroma"
+  },
+  {
+    "steamAppId": "1448840",
+    "r2modmanInternalName": "VeryVeryValet",
+    "displayName": "Very Very Valet"
+  },
+  {
+    "steamAppId": "1457320",
+    "r2modmanInternalName": "Techtonica",
+    "displayName": "Techtonica"
+  },
+  {
+    "steamAppId": "1557740",
+    "r2modmanInternalName": "ROUNDS",
+    "displayName": "ROUNDS"
+  },
+  {
+    "steamAppId": "1562430",
+    "r2modmanInternalName": "Dredge",
+    "displayName": "Dredge"
+  },
+  {
+    "steamAppId": "1584840",
+    "r2modmanInternalName": "AGAINST",
+    "displayName": "AGAINST"
+  },
+  {
+    "steamAppId": "1604030",
+    "r2modmanInternalName": "VRising",
+    "displayName": "V Rising"
+  },
+  {
+    "steamAppId": "1620340",
+    "r2modmanInternalName": "WrestlingEmpire",
+    "displayName": "Wrestling Empire"
+  },
+  {
+    "steamAppId": "1621690",
+    "r2modmanInternalName": "CoreKeeper",
+    "displayName": "Core Keeper"
+  },
+  {
+    "steamAppId": "1625450",
+    "r2modmanInternalName": "Muck",
+    "displayName": "Muck"
+  },
+  {
+    "steamAppId": "1628610",
+    "r2modmanInternalName": "PaqueretteDownTheBunburrows",
+    "displayName": "Paquerette Down the Bunburrows"
+  },
+  {
+    "steamAppId": "1660080",
+    "r2modmanInternalName": "Aloft",
+    "displayName": "Aloft"
+  },
+  {
+    "steamAppId": "1686940",
+    "r2modmanInternalName": "BoplBattle",
+    "displayName": "Bopl Battle"
+  },
+  {
+    "steamAppId": "1730700",
+    "r2modmanInternalName": "WeLoveKatamariRerollRoyalReverie",
+    "displayName": "We Love Katamari REROLL+ Royal Reverie"
+  },
+  {
+    "steamAppId": "1735700",
+    "r2modmanInternalName": "BacktotheDawn",
+    "displayName": "Back to the Dawn"
+  },
+  {
+    "steamAppId": "1740300",
+    "r2modmanInternalName": "SmushiComeHome",
+    "displayName": "Smushi Come Home"
+  },
+  {
+    "steamAppId": "1745680",
+    "r2modmanInternalName": "OddRemedy",
+    "displayName": "Odd Remedy"
+  },
+  {
+    "steamAppId": "1758860",
+    "r2modmanInternalName": "OutwardDe",
+    "displayName": "Outward"
+  },
+  {
+    "steamAppId": "1764530",
+    "r2modmanInternalName": "Sailwind",
+    "displayName": "Sailwind"
+  },
+  {
+    "steamAppId": "1782210",
+    "r2modmanInternalName": "CrabGame",
+    "displayName": "Crab Game"
+  },
+  {
+    "steamAppId": "1782330",
+    "r2modmanInternalName": "GreenHellVR",
+    "displayName": "Green Hell VR"
+  },
+  {
+    "steamAppId": "1787860",
+    "r2modmanInternalName": "Crawlspace",
+    "displayName": "Crawlspace"
+  },
+  {
+    "steamAppId": "1809540",
+    "r2modmanInternalName": "NineSols",
+    "displayName": "Nine Sols"
+  },
+  {
+    "steamAppId": "1811990",
+    "r2modmanInternalName": "Wildfrost",
+    "displayName": "Wildfrost"
+  },
+  {
+    "steamAppId": "1843760",
+    "r2modmanInternalName": "RogueTower",
+    "displayName": "Rogue Tower"
+  },
+  {
+    "steamAppId": "1859470",
+    "r2modmanInternalName": "PacManWorldRePac",
+    "displayName": "PAC-MAN WORLD Re-PAC"
+  },
+  {
+    "steamAppId": "1876590",
+    "r2modmanInternalName": "IAmYourBeast",
+    "displayName": "I Am Your Beast"
+  },
+  {
+    "steamAppId": "1887840",
+    "r2modmanInternalName": "AnotherCrabsTreasure",
+    "displayName": "Another Crab's Treasure"
+  },
+  {
+    "steamAppId": "1898300",
+    "r2modmanInternalName": "ASKA",
+    "displayName": "ASKA"
+  },
+  {
+    "steamAppId": "1931180",
+    "r2modmanInternalName": "LostSkies",
+    "displayName": "Lost Skies"
+  },
+  {
+    "steamAppId": "1939160",
+    "r2modmanInternalName": "ShadowsOverLoathing",
+    "displayName": "Shadows Over Loathing"
+  },
+  {
+    "steamAppId": "1948280",
+    "r2modmanInternalName": "Stacklands",
+    "displayName": "Stacklands"
+  },
+  {
+    "steamAppId": "1966720",
+    "r2modmanInternalName": "LethalCompany",
+    "displayName": "Lethal Company"
+  },
+  {
+    "steamAppId": "1966900",
+    "r2modmanInternalName": "20MinutesTillDawn",
+    "displayName": "20 Minutes Till Dawn"
+  },
+  {
+    "steamAppId": "1982120",
+    "r2modmanInternalName": "PaperAnimalAdventure",
+    "displayName": "Paper Animal Adventure"
+  },
+  {
+    "steamAppId": "2027330",
+    "r2modmanInternalName": "GoreBox",
+    "displayName": "GoreBox"
+  },
+  {
+    "steamAppId": "2060160",
+    "r2modmanInternalName": "TheFarmerWasReplaced",
+    "displayName": "The Farmer Was Replaced"
+  },
+  {
+    "steamAppId": "2067920",
+    "r2modmanInternalName": "RogueGenesia",
+    "displayName": "Rogue : Genesia"
+  },
+  {
+    "steamAppId": "2080690",
+    "r2modmanInternalName": "Sunkenland",
+    "displayName": "Sunkenland"
+  },
+  {
+    "steamAppId": "2096510",
+    "r2modmanInternalName": "TheOuroborosKing",
+    "displayName": "The Ouroboros King"
+  },
+  {
+    "steamAppId": "2102670",
+    "r2modmanInternalName": "LostSkiesIslandCreator",
+    "displayName": "Lost Skies Island Creator"
+  },
+  {
+    "steamAppId": "2103140",
+    "r2modmanInternalName": "Magicraft",
+    "displayName": "Magicraft"
+  },
+  {
+    "steamAppId": "2106670",
+    "r2modmanInternalName": "Gatekeeper",
+    "displayName": "Gatekeeper"
+  },
+  {
+    "steamAppId": "2124120",
+    "r2modmanInternalName": "SULFUR",
+    "displayName": "SULFUR"
+  },
+  {
+    "steamAppId": "2134320",
+    "r2modmanInternalName": "ENADreamBBQ",
+    "displayName": "ENA: Dream BBQ"
+  },
+  {
+    "steamAppId": "2162800",
+    "r2modmanInternalName": "Shapez2",
+    "displayName": "Shapez 2"
+  },
+  {
+    "steamAppId": "2168680",
+    "r2modmanInternalName": "NuclearOption",
+    "displayName": "Nuclear Option"
+  },
+  {
+    "steamAppId": "2171630",
+    "r2modmanInternalName": "ReturnFromCore",
+    "displayName": "Return From Core"
+  },
+  {
+    "steamAppId": "2200780",
+    "r2modmanInternalName": "MyDreamSetup",
+    "displayName": "My Dream Setup"
+  },
+  {
+    "steamAppId": "2236070",
+    "r2modmanInternalName": "PeaksOfYore",
+    "displayName": "Peaks of Yore"
+  },
+  {
+    "steamAppId": "2239150",
+    "r2modmanInternalName": "Thronefall",
+    "displayName": "Thronefall"
+  },
+  {
+    "steamAppId": "2258670",
+    "r2modmanInternalName": "Crawlspace2",
+    "displayName": "Crawlspace 2"
+  },
+  {
+    "steamAppId": "2286780",
+    "r2modmanInternalName": "Aeruta",
+    "displayName": "Aeruta"
+  },
+  {
+    "steamAppId": "2289750",
+    "r2modmanInternalName": "SuperFantasyKingdom",
+    "displayName": "Super Fantasy Kingdom"
+  },
+  {
+    "steamAppId": "2318480",
+    "r2modmanInternalName": "LastTrainOuttaWormtown",
+    "displayName": "Last Train Outta' Wormtown"
+  },
+  {
+    "steamAppId": "2321470",
+    "r2modmanInternalName": "DeepRockGalacticSurvivor",
+    "displayName": "Deep Rock Galactic: Survivor"
+  },
+  {
+    "steamAppId": "2382520",
+    "r2modmanInternalName": "Erenshor",
+    "displayName": "Erenshor"
+  },
+  {
+    "steamAppId": "2383200",
+    "r2modmanInternalName": "Patapon12Replay",
+    "displayName": "PATAPON 1+2 REPLAY"
+  },
+  {
+    "steamAppId": "2386720",
+    "r2modmanInternalName": "STRAFTAT",
+    "displayName": "STRAFTAT"
+  },
+  {
+    "steamAppId": "2482250",
+    "r2modmanInternalName": "GoblinBusterIncrementalTowerDefense",
+    "displayName": "Goblin Buster: Incremental Tower Defense"
+  },
+  {
+    "steamAppId": "2503770",
+    "r2modmanInternalName": "HouseOfLegacy",
+    "displayName": "House of Legacy"
+  },
+  {
+    "steamAppId": "2527500",
+    "r2modmanInternalName": "MiSide",
+    "displayName": "MiSide"
+  },
+  {
+    "steamAppId": "2587450",
+    "r2modmanInternalName": "TankTeam",
+    "displayName": "Tank Team"
+  },
+  {
+    "steamAppId": "2596100",
+    "r2modmanInternalName": "Lycans",
+    "displayName": "Lycans"
+  },
+  {
+    "steamAppId": "2638370",
+    "r2modmanInternalName": "FiveNightsAtFreddysIntoThePit",
+    "displayName": "Five Nights at Freddy's: Into the Pit"
+  },
+  {
+    "steamAppId": "2643810",
+    "r2modmanInternalName": "BetrayalBeach",
+    "displayName": "Betrayal Beach"
+  },
+  {
+    "steamAppId": "2683150",
+    "r2modmanInternalName": "AleAndTaleTavern",
+    "displayName": "Ale & Tale Tavern"
+  },
+  {
+    "steamAppId": "2689120",
+    "r2modmanInternalName": "GladioMori",
+    "displayName": "Gladio Mori"
+  },
+  {
+    "steamAppId": "2709570",
+    "r2modmanInternalName": "SupermarketTogether",
+    "displayName": "Supermarket Together"
+  },
+  {
+    "steamAppId": "2737070",
+    "r2modmanInternalName": "CrimeSimulator",
+    "displayName": "Crime Simulator"
+  },
+  {
+    "steamAppId": "2742830",
+    "r2modmanInternalName": "MonsterTrain2",
+    "displayName": "Monster Train 2"
+  },
+  {
+    "steamAppId": "2765860",
+    "r2modmanInternalName": "SlipstreamRogueSpace",
+    "displayName": "Slipstream: Rogue Space"
+  },
+  {
+    "steamAppId": "2768430",
+    "r2modmanInternalName": "ATLYSS",
+    "displayName": "ATLYSS"
+  },
+  {
+    "steamAppId": "2773280",
+    "r2modmanInternalName": "ANEURISMIV",
+    "displayName": "ANEURISM IV"
+  },
+  {
+    "steamAppId": "2784470",
+    "r2modmanInternalName": "9Kings",
+    "displayName": "9 Kings"
+  },
+  {
+    "steamAppId": "2820700",
+    "r2modmanInternalName": "AgentlemensDispute",
+    "displayName": "A Gentlemen's Dispute"
+  },
+  {
+    "steamAppId": "2846060",
+    "r2modmanInternalName": "Subterror",
+    "displayName": "Subterror"
+  },
+  {
+    "steamAppId": "2878420",
+    "r2modmanInternalName": "OldMarketSimulator",
+    "displayName": "Old Market Simulator"
+  },
+  {
+    "steamAppId": "2881650",
+    "r2modmanInternalName": "ContentWarning",
+    "displayName": "Content Warning"
+  },
+  {
+    "steamAppId": "3009850",
+    "r2modmanInternalName": "HardTime3",
+    "displayName": "Hard Time III"
+  },
+  {
+    "steamAppId": "3070070",
+    "r2modmanInternalName": "TCGCardShopSimulator",
+    "displayName": "TCG Card Shop Simulator"
+  },
+  {
+    "steamAppId": "3075800",
+    "r2modmanInternalName": "Subterranauts",
+    "displayName": "Subterranauts"
+  },
+  {
+    "steamAppId": "3121110",
+    "r2modmanInternalName": "Zort",
+    "displayName": "Zort"
+  },
+  {
+    "steamAppId": "3195790",
+    "r2modmanInternalName": "WhiteKnuckle",
+    "displayName": "White Knuckle"
+  },
+  {
+    "steamAppId": "3241660",
+    "r2modmanInternalName": "REPO",
+    "displayName": "R.E.P.O."
+  },
+  {
+    "steamAppId": "3247750",
+    "r2modmanInternalName": "Mycopunk",
+    "displayName": "Mycopunk"
+  },
+  {
+    "steamAppId": "3293010",
+    "r2modmanInternalName": "EasyDeliveryCo",
+    "displayName": "Easy Delivery Co"
+  },
+  {
+    "steamAppId": "3298460",
+    "r2modmanInternalName": "PushingItTogetherSisyphusCoOp",
+    "displayName": "Pushing it! Together - Sisyphus Co-op"
+  },
+  {
+    "steamAppId": "3314790",
+    "r2modmanInternalName": "CloverPit",
+    "displayName": "CloverPit"
+  },
+  {
+    "steamAppId": "3341650",
+    "r2modmanInternalName": "PIGFACE",
+    "displayName": "PIGFACE"
+  },
+  {
+    "steamAppId": "3400930",
+    "r2modmanInternalName": "GuiltyasSock",
+    "displayName": "Guilty as Sock!"
+  },
+  {
+    "steamAppId": "3404470",
+    "r2modmanInternalName": "MaltesesFluffyOnsen",
+    "displayName": "Maltese's Fluffy Onsen"
+  },
+  {
+    "steamAppId": "3405340",
+    "r2modmanInternalName": "Megabonk",
+    "displayName": "Megabonk"
+  },
+  {
+    "steamAppId": "3527290",
+    "r2modmanInternalName": "PEAK",
+    "displayName": "PEAK"
+  },
+  {
+    "steamAppId": "3548580",
+    "r2modmanInternalName": "ChillWithYouLoFiStory",
+    "displayName": "Chill with You : Lo-Fi Story"
+  },
+  {
+    "steamAppId": "3551340",
+    "r2modmanInternalName": "FootballManager26",
+    "displayName": "Football Manager 26"
+  },
+  {
+    "steamAppId": "3586660",
+    "r2modmanInternalName": "WordPlay",
+    "displayName": "Word Play"
+  },
+  {
+    "steamAppId": "3679930",
+    "r2modmanInternalName": "FactoryPlanner",
+    "displayName": "Factory Planner"
+  },
+  {
+    "steamAppId": "3707400",
+    "r2modmanInternalName": "OnTogetherVirtualCoWorking",
+    "displayName": "On-Together: Virtual Co-Working"
+  },
+  {
+    "steamAppId": "3716600",
+    "r2modmanInternalName": "MageArena",
+    "displayName": "Mage Arena"
+  },
+  {
+    "steamAppId": "3743090",
+    "r2modmanInternalName": "DeadlyDelivery",
+    "displayName": "Deadly Delivery"
+  },
+  {
+    "steamAppId": "3834090",
+    "r2modmanInternalName": "Yapyap",
+    "displayName": "YAPYAP"
+  },
+  {
+    "steamAppId": "3846120",
+    "r2modmanInternalName": "MineMogul",
+    "displayName": "MineMogul"
+  },
+  {
+    "steamAppId": "3925760",
+    "r2modmanInternalName": "UnfairFlips",
+    "displayName": "Unfair Flips"
+  },
+  {
+    "steamAppId": "4069520",
+    "r2modmanInternalName": "SuperBattleGolf",
+    "displayName": "Super Battle Golf"
+  }
+]

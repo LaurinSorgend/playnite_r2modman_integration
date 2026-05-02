@@ -1,0 +1,45 @@
+name: update-mappings
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 04:17 UTC.
+    - cron: '17 4 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_game_mappings.py'
+      - '.forgejo/workflows/update-mappings.yml'
+      - 'src/PlayniteR2modman/Resources/r2modman_games.json'
+  pull_request:
+    paths:
+      - 'scripts/update_game_mappings.py'
+      - 'src/PlayniteR2modman/Resources/r2modman_games.json'
+
+jobs:
+  drift-check:
+    runs-on: docker
+    steps:
+      - name: Checkout
+        uses: https://code.forgejo.org/actions/checkout@v4
+
+      - name: Mark workspace as safe for git
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Set up Python
+        uses: https://code.forgejo.org/actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run extractor
+        run: python scripts/update_game_mappings.py
+
+      - name: Fail if bundled mapping is out of date
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! git diff --exit-code -- src/PlayniteR2modman/Resources/r2modman_games.json; then
+            echo "::error::r2modman_games.json is out of sync with upstream ecosystem.json."
+            echo "Run 'python scripts/update_game_mappings.py' locally and commit the result."
+            exit 1
+          fi
