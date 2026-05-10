@@ -1,6 +1,6 @@
 # Playnite r2modman integration
 
-Playnite plugin that adds launch entries ´for [r2modman](https://r2modman.com/) profiles when you click Play on a supported Steam game. Profiles are read live from disk, no config to keep in sync.
+Playnite plugin that adds launch entries for [r2modman](https://r2modman.com/) profiles when you click Play on a supported Steam game. Profiles are read live from disk, no config to keep in sync.
 
 Status: WIP. Covers BepInEx games on Steam.
 
