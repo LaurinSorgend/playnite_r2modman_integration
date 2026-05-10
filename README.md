@@ -18,7 +18,9 @@ Output: `src\PlayniteR2modman\bin\Debug\`.
 
 ## Install
 
-Playnite → **Settings → For developers → External extensions** → add the `bin\Debug` folder → restart Playnite.
+Download the `.pext` from [Releases](https://codeberg.org/LaurinS/playnite_r2modman_integration/releases) and double-click to install.
+
+Dev build: Playnite → **Settings → For developers → External extensions** → add the `bin\Debug` folder → restart.
 
 
 ## Adding games
