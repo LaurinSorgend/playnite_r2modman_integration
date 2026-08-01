@@ -21,12 +21,12 @@ jobs:
     steps:
       - name: Checkout
         uses: https://code.forgejo.org/actions/checkout@v4
-        with:
-          ref: ${{ forgejo.event_name != 'pull_request' && 'main' || '' }}
 
       - name: Mark workspace as safe for git
         shell: bash
-        run: git config --global --add safe.directory "$FORGEJO_WORKSPACE"
+        run: |
+          set -euo pipefail
+          git config --global --add safe.directory "${FORGEJO_WORKSPACE:?}"
 
       - name: Install Python
         shell: bash
@@ -39,8 +39,7 @@ jobs:
       - name: Run extractor
         run: python scripts/update_game_mappings.py
 
-      - name: Commit and push refreshed mapping
-        if: forgejo.event_name != 'pull_request'
+      - name: Sync refreshed mapping
         shell: bash
         env:
           FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
@@ -51,19 +50,18 @@ jobs:
             echo "Mapping is already in sync with upstream ecosystem.json."
             exit 0
           fi
-          git config user.name "forgejo-actions"
-          git config user.email "forgejo-actions@noreply.codeberg.org"
-          git commit -q -m "Update r2modman game mappings" -- "$mapping"
-          host="${FORGEJO_SERVER_URL#https://}"
-          git push "https://forgejo-actions:${FORGEJO_TOKEN}@${host}/${FORGEJO_REPOSITORY}.git" HEAD:main
-
-      - name: Fail if bundled mapping is out of date
-        if: forgejo.event_name == 'pull_request'
-        shell: bash
-        run: |
-          set -euo pipefail
-          if ! git diff --exit-code -- src/PlayniteR2modman/Resources/r2modman_games.json; then
+          if [ "${FORGEJO_EVENT_NAME:?}" = "pull_request" ]; then
+            git diff -- "$mapping"
             echo "::error::r2modman_games.json is out of sync with upstream ecosystem.json."
             echo "Run 'python scripts/update_game_mappings.py' locally and commit the result."
             exit 1
           fi
+          if [ -z "${FORGEJO_TOKEN:-}" ]; then
+            echo "::error::No automatic token available; cannot push the refreshed mapping."
+            exit 1
+          fi
+          git config user.name "forgejo-actions"
+          git config user.email "forgejo-actions@noreply.codeberg.org"
+          git commit -q -m "Update r2modman game mappings" -- "$mapping"
+          host="${FORGEJO_SERVER_URL:?}"
+          git push "https://forgejo-actions:${FORGEJO_TOKEN}@${host#https://}/${FORGEJO_REPOSITORY:?}.git" HEAD:main
