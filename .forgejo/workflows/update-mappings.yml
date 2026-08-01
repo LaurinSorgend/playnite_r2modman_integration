@@ -16,11 +16,13 @@ on:
       - 'src/PlayniteR2modman/Resources/r2modman_games.json'
 
 jobs:
-  drift-check:
+  sync-mappings:
     runs-on: docker
     steps:
       - name: Checkout
         uses: https://code.forgejo.org/actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
 
       - name: Mark workspace as safe for git
         shell: bash
@@ -37,7 +39,31 @@ jobs:
       - name: Run extractor
         run: python scripts/update_game_mappings.py
 
+      - name: Commit and push refreshed mapping
+        if: github.event_name != 'pull_request'
+        shell: bash
+        env:
+          PUSH_TOKEN: ${{ secrets.MAPPINGS_PUSH_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          mapping=src/PlayniteR2modman/Resources/r2modman_games.json
+          if git diff --quiet -- "$mapping"; then
+            echo "Mapping is already in sync with upstream ecosystem.json."
+            exit 0
+          fi
+          if [ -z "${PUSH_TOKEN:-}" ]; then
+            echo "::error::No push token available; set the MAPPINGS_PUSH_TOKEN secret."
+            exit 1
+          fi
+          git config user.name "forgejo-actions[bot]"
+          git config user.email "forgejo-actions[bot]@noreply.codeberg.org"
+          git add "$mapping"
+          git commit -m "Update r2modman game mappings [skip ci]"
+          origin="${GITHUB_SERVER_URL#https://}"
+          git push "https://x-access-token:${PUSH_TOKEN}@${origin}/${GITHUB_REPOSITORY}.git" HEAD:main
+
       - name: Fail if bundled mapping is out of date
+        if: github.event_name == 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
