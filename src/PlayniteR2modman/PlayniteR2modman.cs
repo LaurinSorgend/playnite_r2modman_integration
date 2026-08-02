@@ -24,6 +24,10 @@ namespace PlayniteR2modman
 
         public PlayniteR2modman(IPlayniteAPI api) : base(api)
         {
+            Properties = new GenericPluginProperties
+            {
+                HasSettings = true
+            };
             settings = new PlayniteR2modmanSettingsViewModel(this);
             mappingStore = new GameMappingStore(GetPluginInstallPath());
             try
@@ -34,10 +38,6 @@ namespace PlayniteR2modman
             {
                 logger.Error(ex, "Failed to load r2modman mappings during plugin init");
             }
-            Properties = new GenericPluginProperties
-            {
-                HasSettings = true
-            };
         }
 
         public void ReloadMappings()
@@ -61,11 +61,20 @@ namespace PlayniteR2modman
                 yield break;
             }
 
-            var profiles = scanner.ScanGame(settings.Settings.DataFolderOverride, mapping.R2modmanInternalName, appId);
-            if (profiles.Count == 0 && settings.Settings.OnlyShowWhenProfileExists)
+            IReadOnlyList<DiscoveredProfile> profiles = null;
+            try
+            {
+                profiles = scanner.ScanGame(settings.Settings.DataFolderOverride, mapping.R2modmanInternalName, appId);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, $"Failed to scan r2modman profiles for {mapping.DisplayName} ({appId})");
+            }
+            if (profiles == null || profiles.Count == 0)
             {
                 yield break;
             }
+            logger.Info($"Injecting {profiles.Count} modded play action(s) for {mapping.DisplayName} ({appId}).");
 
             foreach (var profile in profiles)
             {

@@ -10,9 +10,6 @@
             <CheckBox Content="Enable injection globally"
                       IsChecked="{Binding Settings.EnableInjection}"
                       Margin="0,4"/>
-            <CheckBox Content="Only show modded launch options when at least one profile exists"
-                      IsChecked="{Binding Settings.OnlyShowWhenProfileExists}"
-                      Margin="0,4"/>
 
             <TextBlock Text="r2modman data folder override (leave empty for default %AppData%\r2modmanPlus-local):"
                        Margin="0,12,0,4"/>

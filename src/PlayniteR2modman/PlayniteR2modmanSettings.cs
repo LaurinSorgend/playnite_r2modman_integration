@@ -24,20 +24,25 @@ namespace PlayniteR2modman
     public class PlayniteR2modmanSettings : ObservableObject
     {
         private bool enableInjection = true;
-        private bool onlyShowWhenProfileExists = true;
         private string dataFolderOverride = string.Empty;
         private ObservableCollection<UserMappingEntry> userMappings = new ObservableCollection<UserMappingEntry>();
 
         public bool EnableInjection { get => enableInjection; set => SetValue(ref enableInjection, value); }
-        public bool OnlyShowWhenProfileExists { get => onlyShowWhenProfileExists; set => SetValue(ref onlyShowWhenProfileExists, value); }
         public string DataFolderOverride { get => dataFolderOverride; set => SetValue(ref dataFolderOverride, value); }
         public ObservableCollection<UserMappingEntry> UserMappings { get => userMappings; set => SetValue(ref userMappings, value); }
 
-        public Dictionary<string, string> BuildOverrideMap() =>
+        public Dictionary<string, UserMappingOverride> BuildOverrideMap() =>
             UserMappings
                 .Where(m => !string.IsNullOrWhiteSpace(m.SteamAppId) && !string.IsNullOrWhiteSpace(m.R2modmanInternalName))
                 .GroupBy(m => m.SteamAppId.Trim())
-                .ToDictionary(g => g.Key, g => g.Last().R2modmanInternalName.Trim(), StringComparer.Ordinal);
+                .ToDictionary(
+                    g => g.Key,
+                    g => new UserMappingOverride
+                    {
+                        R2modmanInternalName = g.Last().R2modmanInternalName.Trim(),
+                        DisplayName = g.Last().DisplayName
+                    },
+                    StringComparer.Ordinal);
 
         public Dictionary<string, bool> BuildDisabledMap() =>
             UserMappings
@@ -96,7 +101,11 @@ namespace PlayniteR2modman
         }
 
         public void BeginEdit() => editingClone = Serialization.GetClone(Settings);
-        public void CancelEdit() => Settings = editingClone;
+        public void CancelEdit()
+        {
+            Settings = editingClone;
+            plugin.ReloadMappings();
+        }
         public void EndEdit()
         {
             plugin.SavePluginSettings(Settings);
@@ -105,7 +114,48 @@ namespace PlayniteR2modman
         public bool VerifySettings(out List<string> errors)
         {
             errors = new List<string>();
-            return true;
+            if (!R2modmanScanner.TryResolveDataFolder(Settings.DataFolderOverride, out _, out var folderError))
+            {
+                errors.Add($"Data folder override: {folderError}");
+            }
+            ValidateMappings(errors);
+            return errors.Count == 0;
+        }
+
+        private void ValidateMappings(List<string> errors)
+        {
+            var seenAppIds = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var row in Settings.UserMappings)
+            {
+                var appId = (row.SteamAppId ?? string.Empty).Trim();
+                var folder = (row.R2modmanInternalName ?? string.Empty).Trim();
+                if (appId.Length == 0 && folder.Length == 0)
+                {
+                    continue;
+                }
+                if (appId.Length == 0)
+                {
+                    errors.Add($"Mapping for '{folder}': Steam AppId is required.");
+                    continue;
+                }
+                if (!appId.All(char.IsDigit))
+                {
+                    errors.Add($"Mapping '{appId}': Steam AppId must be numeric.");
+                    continue;
+                }
+                if (!seenAppIds.Add(appId))
+                {
+                    errors.Add($"Mapping '{appId}': duplicate Steam AppId.");
+                }
+                if (folder.Length == 0 && !row.IsDisabled)
+                {
+                    errors.Add($"Mapping '{appId}': r2modman folder name is required unless the row is disabled.");
+                }
+                else if (folder.Length > 0 && !R2modmanScanner.IsValidFolderName(folder))
+                {
+                    errors.Add($"Mapping '{appId}': '{folder}' is not a valid folder name.");
+                }
+            }
         }
 
         private void RunScan()

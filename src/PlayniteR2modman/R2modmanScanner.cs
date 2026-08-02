@@ -16,15 +16,76 @@ namespace PlayniteR2modman
     public class R2modmanScanner
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        private const string PreloaderRelativePath = @"BepInEx\core\BepInEx.Preloader.dll";
+
+        private class LoaderVariant
+        {
+            public LoaderVariant(string relativePath, DoorstopGeneration doorstop)
+            {
+                RelativePath = relativePath;
+                Doorstop = doorstop;
+            }
+
+            public string RelativePath { get; }
+            public DoorstopGeneration Doorstop { get; }
+        }
+
+        /// <summary>Probed in order, so a BepInEx 6 layout wins over a leftover BepInEx 5 preloader.</summary>
+        private static readonly LoaderVariant[] LoaderVariants =
+        {
+            new LoaderVariant(@"BepInEx\core\BepInEx.Unity.IL2CPP.dll", DoorstopGeneration.Four),
+            new LoaderVariant(@"BepInEx\core\BepInEx.Unity.Mono.Preloader.dll", DoorstopGeneration.Four),
+            new LoaderVariant(@"BepInEx\core\BepInEx.Preloader.dll", DoorstopGeneration.Three)
+        };
 
         public static string DefaultDataFolder =>
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "r2modmanPlus-local");
 
+        /// <summary>Resolves a user-supplied data folder, reporting why it is unusable instead of throwing.</summary>
+        public static bool TryResolveDataFolder(string dataFolder, out string resolved, out string error)
+        {
+            error = null;
+            if (string.IsNullOrWhiteSpace(dataFolder))
+            {
+                resolved = DefaultDataFolder;
+                return true;
+            }
+
+            resolved = null;
+            var trimmed = dataFolder.Trim().Trim('"');
+            try
+            {
+                if (!Path.IsPathRooted(trimmed))
+                {
+                    error = $"'{trimmed}' is not an absolute path.";
+                    return false;
+                }
+                resolved = Path.GetFullPath(trimmed);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = $"'{trimmed}' is not a usable folder path: {ex.Message}";
+                return false;
+            }
+        }
+
+        public static bool IsValidFolderName(string name) =>
+            !string.IsNullOrWhiteSpace(name) && name.IndexOfAny(Path.GetInvalidFileNameChars()) < 0;
+
         public IReadOnlyList<DiscoveredProfile> ScanGame(string dataFolder, string r2modmanInternalName, string steamAppId)
         {
             var results = new List<DiscoveredProfile>();
-            var resolvedDataFolder = string.IsNullOrWhiteSpace(dataFolder) ? DefaultDataFolder : dataFolder;
+            if (!TryResolveDataFolder(dataFolder, out var resolvedDataFolder, out var folderError))
+            {
+                logger.Warn($"r2modman data folder override rejected: {folderError}");
+                return results;
+            }
+            if (!IsValidFolderName(r2modmanInternalName))
+            {
+                logger.Warn($"Mapping for Steam AppId {steamAppId} has an unusable r2modman folder name '{r2modmanInternalName}'.");
+                return results;
+            }
+
             var gameRoot = Path.Combine(resolvedDataFolder, r2modmanInternalName);
             var profilesRoot = Path.Combine(gameRoot, "profiles");
 
@@ -39,22 +100,13 @@ namespace PlayniteR2modman
                 return results;
             }
 
-            foreach (var profileDir in Directory.EnumerateDirectories(profilesRoot))
+            foreach (var profileDir in EnumerateDirectories(profilesRoot))
             {
-                var preloader = Path.Combine(profileDir, PreloaderRelativePath);
-                if (!File.Exists(preloader))
+                var profile = BuildProfile(profileDir, steamAppId);
+                if (profile != null)
                 {
-                    logger.Debug($"Skipping profile (preloader missing): {profileDir}");
-                    continue;
+                    results.Add(profile);
                 }
-
-                var profileName = Path.GetFileName(profileDir);
-                results.Add(new DiscoveredProfile
-                {
-                    ProfileName = profileName,
-                    PreloaderPath = preloader,
-                    SteamRunUrl = DoorstopLaunchBuilder.BuildSteamRunUrl(steamAppId, preloader)
-                });
             }
 
             if (results.Count == 0)
@@ -70,12 +122,46 @@ namespace PlayniteR2modman
 
         public IReadOnlyList<string> ListGameFolders(string dataFolder)
         {
-            var resolvedDataFolder = string.IsNullOrWhiteSpace(dataFolder) ? DefaultDataFolder : dataFolder;
-            if (!Directory.Exists(resolvedDataFolder))
+            if (!TryResolveDataFolder(dataFolder, out var resolvedDataFolder, out _) || !Directory.Exists(resolvedDataFolder))
             {
                 return Array.Empty<string>();
             }
-            return Directory.EnumerateDirectories(resolvedDataFolder).Select(Path.GetFileName).ToList();
+            return EnumerateDirectories(resolvedDataFolder).Select(Path.GetFileName).ToList();
+        }
+
+        private static DiscoveredProfile BuildProfile(string profileDir, string steamAppId)
+        {
+            foreach (var variant in LoaderVariants)
+            {
+                var preloader = Path.Combine(profileDir, variant.RelativePath);
+                if (!File.Exists(preloader))
+                {
+                    continue;
+                }
+
+                return new DiscoveredProfile
+                {
+                    ProfileName = Path.GetFileName(profileDir),
+                    PreloaderPath = preloader,
+                    SteamRunUrl = DoorstopLaunchBuilder.BuildSteamRunUrl(steamAppId, preloader, variant.Doorstop)
+                };
+            }
+
+            logger.Info($"Skipping profile (no supported BepInEx preloader under BepInEx\\core): {profileDir}");
+            return null;
+        }
+
+        private static IReadOnlyList<string> EnumerateDirectories(string root)
+        {
+            try
+            {
+                return Directory.EnumerateDirectories(root).ToList();
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, $"Failed to enumerate {root}");
+                return Array.Empty<string>();
+            }
         }
     }
 }

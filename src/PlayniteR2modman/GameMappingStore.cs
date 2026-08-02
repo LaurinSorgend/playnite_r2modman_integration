@@ -15,6 +15,12 @@ namespace PlayniteR2modman
         public bool IsBundled { get; set; }
     }
 
+    public class UserMappingOverride
+    {
+        public string R2modmanInternalName { get; set; }
+        public string DisplayName { get; set; }
+    }
+
     public class GameMappingStore
     {
         private static readonly ILogger logger = LogManager.GetLogger();
@@ -31,7 +37,7 @@ namespace PlayniteR2modman
 
         public bool TryGet(string steamAppId, out GameMapping mapping) => mappings.TryGetValue(steamAppId, out mapping);
 
-        public void Reload(IDictionary<string, string> userOverrides, IDictionary<string, bool> disabledByAppId)
+        public void Reload(IDictionary<string, UserMappingOverride> userOverrides, IDictionary<string, bool> disabledByAppId)
         {
             var loaded = new Dictionary<string, GameMapping>(StringComparer.Ordinal);
 
@@ -45,7 +51,7 @@ namespace PlayniteR2modman
             {
                 foreach (var kv in userOverrides)
                 {
-                    if (string.IsNullOrWhiteSpace(kv.Key) || string.IsNullOrWhiteSpace(kv.Value))
+                    if (string.IsNullOrWhiteSpace(kv.Key) || string.IsNullOrWhiteSpace(kv.Value?.R2modmanInternalName))
                     {
                         continue;
                     }
@@ -53,8 +59,8 @@ namespace PlayniteR2modman
                     loaded[kv.Key] = new GameMapping
                     {
                         SteamAppId = kv.Key,
-                        R2modmanInternalName = kv.Value,
-                        DisplayName = loaded.TryGetValue(kv.Key, out var existing) ? existing.DisplayName : kv.Value,
+                        R2modmanInternalName = kv.Value.R2modmanInternalName,
+                        DisplayName = ResolveDisplayName(kv.Key, kv.Value, loaded),
                         IsBundled = false
                     };
                 }
@@ -70,6 +76,17 @@ namespace PlayniteR2modman
 
             mappings = loaded;
             logger.Info($"r2modman mappings loaded: {mappings.Count} entries (bundled file: {bundledJsonPath})");
+        }
+
+        private static string ResolveDisplayName(string steamAppId, UserMappingOverride userOverride, Dictionary<string, GameMapping> loaded)
+        {
+            if (!string.IsNullOrWhiteSpace(userOverride.DisplayName))
+            {
+                return userOverride.DisplayName.Trim();
+            }
+            return loaded.TryGetValue(steamAppId, out var existing) && !string.IsNullOrWhiteSpace(existing.DisplayName)
+                ? existing.DisplayName
+                : userOverride.R2modmanInternalName;
         }
 
         private List<GameMapping> LoadBundled()
