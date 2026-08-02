@@ -1,0 +1,17 @@
+AddonId: 'PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1'
+Packages:
+  - Version: 0.2.0
+    RequiredApiVersion: 6.15.0
+    ReleaseDate: 2026-08-02
+    PackageUrl: https://codeberg.org/LaurinS/playnite_r2modman_integration/releases/download/v0.2.0/PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1_0_2_0.pext
+    Changelog:
+      - Support BepInEx 6 and Doorstop 4 alongside BepInEx 5
+      - Validate settings input and report bad paths instead of failing silently
+      - Remove the profile toggle that had no effect
+      - Game mapping extractor warns on bad or duplicate Steam AppIds instead of crashing
+  - Version: 0.1.0
+    RequiredApiVersion: 6.15.0
+    ReleaseDate: 2026-05-10
+    PackageUrl: https://codeberg.org/LaurinS/playnite_r2modman_integration/releases/download/v0.1.0/PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1_0_1_0.pext
+    Changelog:
+      - Initial release
