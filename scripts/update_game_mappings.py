@@ -60,9 +60,26 @@ def extract_bepinex_steam_games(ecosystem: dict) -> list[dict]:
 
 
 def deduplicate_and_sort(rows: list[dict]) -> list[dict]:
+    """Keeps the first row per Steam AppId, dropping non-numeric ids so a bad
+    upstream entry cannot abort the whole run. Both cases are reported."""
     by_app_id: dict[str, dict] = {}
     for row in rows:
-        by_app_id.setdefault(row["steamAppId"], row)
+        app_id = row["steamAppId"]
+        if not (app_id.isascii() and app_id.isdigit()):
+            print(
+                f"Skipping non-numeric Steam AppId {app_id!r} "
+                f"({row['r2modmanInternalName']!r})",
+                file=sys.stderr,
+            )
+            continue
+        kept = by_app_id.setdefault(app_id, row)
+        if kept is not row:
+            print(
+                f"Duplicate Steam AppId {app_id}: keeping "
+                f"{kept['r2modmanInternalName']!r}, dropping "
+                f"{row['r2modmanInternalName']!r}",
+                file=sys.stderr,
+            )
     return sorted(by_app_id.values(), key=lambda r: int(r["steamAppId"]))
 
 
