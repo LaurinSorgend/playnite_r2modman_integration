@@ -10,7 +10,7 @@ on:
       - 'scripts/update_game_mappings.py'
       - 'scripts/update_gale_game_mappings.py'
       - 'scripts/sync_mapping.sh'
-      - '.forgejo/workflows/update-mappings.yml'
+      - '.github/workflows/update-mappings.yml'
       - 'src/PlayniteR2modman/Resources/r2modman_games.json'
       - 'src/PlayniteR2modman/Resources/gale_games.json'
   pull_request:
@@ -21,70 +21,45 @@ on:
       - 'src/PlayniteR2modman/Resources/r2modman_games.json'
       - 'src/PlayniteR2modman/Resources/gale_games.json'
 
+permissions:
+  contents: write
+
 jobs:
   sync-mappings:
-    runs-on: docker
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: https://code.forgejo.org/actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Mark workspace as safe for git
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config --global --add safe.directory "${FORGEJO_WORKSPACE:?}"
-
-      - name: Install Python
-        shell: bash
-        run: |
-          set -euo pipefail
-          apt-get update
-          apt-get install -y python3 python3-pip
-          ln -sf /usr/bin/python3 /usr/local/bin/python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Run extractor
         run: python scripts/update_game_mappings.py
 
       - name: Sync refreshed mapping
-        shell: bash
-        env:
-          FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
         run: >-
           bash scripts/sync_mapping.sh
           src/PlayniteR2modman/Resources/r2modman_games.json
           scripts/update_game_mappings.py
 
   sync-gale-mappings:
-    runs-on: docker
+    runs-on: ubuntu-latest
     # Sequential so the two jobs never push to main at the same time; still
     # runs when the r2modman job fails so a PR reports both drifts.
     needs: sync-mappings
     if: always()
     steps:
-      - name: Checkout
-        uses: https://code.forgejo.org/actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Mark workspace as safe for git
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config --global --add safe.directory "${FORGEJO_WORKSPACE:?}"
-
-      - name: Install Python
-        shell: bash
-        run: |
-          set -euo pipefail
-          apt-get update
-          apt-get install -y python3 python3-pip
-          ln -sf /usr/bin/python3 /usr/local/bin/python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Run extractor
         run: python scripts/update_gale_game_mappings.py
 
       - name: Sync refreshed mapping
-        shell: bash
-        env:
-          FORGEJO_TOKEN: ${{ secrets.FORGEJO_TOKEN }}
         run: >-
           bash scripts/sync_mapping.sh
           src/PlayniteR2modman/Resources/gale_games.json
