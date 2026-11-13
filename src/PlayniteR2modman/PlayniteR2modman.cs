@@ -19,6 +19,8 @@ namespace PlayniteR2modman
         private PlayniteR2modmanSettingsViewModel settings { get; set; }
         private readonly GameMappingStore mappingStore;
         private readonly R2modmanScanner scanner = new R2modmanScanner();
+        private readonly GaleGameCatalog galeCatalog;
+        private readonly GaleScanner galeScanner = new GaleScanner();
 
         public override Guid Id { get; } = Guid.Parse("66e5c414-0820-4919-be6d-3179c4013fc1");
 
@@ -30,6 +32,7 @@ namespace PlayniteR2modman
             };
             settings = new PlayniteR2modmanSettingsViewModel(this);
             mappingStore = new GameMappingStore(GetPluginInstallPath());
+            galeCatalog = new GaleGameCatalog(GetPluginInstallPath());
             try
             {
                 ReloadMappings();
@@ -42,26 +45,33 @@ namespace PlayniteR2modman
 
         public void ReloadMappings()
         {
-            mappingStore.Reload(settings.Settings.BuildOverrideMap(), settings.Settings.BuildDisabledMap());
+            var disabled = settings.Settings.BuildDisabledMap();
+            mappingStore.Reload(settings.Settings.BuildOverrideMap(), disabled);
+            galeCatalog.Reload(disabled);
         }
 
         public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
-            if (args?.Game == null || !settings.Settings.EnableInjection)
+            if (args?.Game == null || !settings.Settings.EnableInjection || args.Game.PluginId != SteamLibraryPluginId)
             {
-                yield break;
-            }
-            if (args.Game.PluginId != SteamLibraryPluginId)
-            {
-                yield break;
+                return Enumerable.Empty<PlayController>();
             }
             var appId = args.Game.GameId;
-            if (string.IsNullOrWhiteSpace(appId) || !mappingStore.TryGet(appId, out var mapping))
+            if (string.IsNullOrWhiteSpace(appId))
             {
-                yield break;
+                return Enumerable.Empty<PlayController>();
+            }
+            return BuildR2modmanActions(args.Game, appId).Concat(BuildGaleActions(args.Game, appId)).ToList();
+        }
+
+        private IEnumerable<PlayController> BuildR2modmanActions(Game game, string appId)
+        {
+            if (!mappingStore.TryGet(appId, out var mapping))
+            {
+                return Enumerable.Empty<PlayController>();
             }
 
-            IReadOnlyList<DiscoveredProfile> profiles = null;
+            IReadOnlyList<DiscoveredProfile> profiles;
             try
             {
                 profiles = scanner.ScanGame(settings.Settings.DataFolderOverride, mapping.R2modmanInternalName, appId);
@@ -69,23 +79,41 @@ namespace PlayniteR2modman
             catch (Exception ex)
             {
                 logger.Error(ex, $"Failed to scan r2modman profiles for {mapping.DisplayName} ({appId})");
+                return Enumerable.Empty<PlayController>();
             }
-            if (profiles == null || profiles.Count == 0)
-            {
-                yield break;
-            }
-            logger.Info($"Injecting {profiles.Count} modded play action(s) for {mapping.DisplayName} ({appId}).");
+            logger.Info($"Injecting {profiles.Count} r2modman play action(s) for {mapping.DisplayName} ({appId}).");
 
-            foreach (var profile in profiles)
+            return profiles.Select(profile => new AutomaticPlayController(game)
             {
-                yield return new AutomaticPlayController(args.Game)
-                {
-                    Type = AutomaticPlayActionType.Url,
-                    Name = $"Modded ({profile.ProfileName}) via r2modman",
-                    Path = profile.SteamRunUrl,
-                    TrackingMode = TrackingMode.Default
-                };
+                Type = AutomaticPlayActionType.Url,
+                Name = $"Modded ({profile.ProfileName}) via r2modman",
+                Path = profile.SteamRunUrl,
+                TrackingMode = TrackingMode.Default
+            }).ToList();
+        }
+
+        private IEnumerable<PlayController> BuildGaleActions(Game game, string appId)
+        {
+            if (!settings.Settings.EnableGale || !galeCatalog.TryGet(appId, out var galeGame))
+            {
+                return Enumerable.Empty<PlayController>();
             }
+
+            var profiles = galeScanner.ListProfiles(settings.Settings.GaleDataFolderOverride, galeGame.GaleSlug);
+            if (profiles.Count == 0)
+            {
+                return Enumerable.Empty<PlayController>();
+            }
+            if (!GaleLauncher.TryResolveExecutable(settings.Settings.GaleExecutableOverride, out var executable, out var error))
+            {
+                logger.Warn($"Gale profiles exist for {galeGame.DisplayName} ({appId}) but Gale can't be launched: {error}");
+                return Enumerable.Empty<PlayController>();
+            }
+            logger.Info($"Injecting {profiles.Count} Gale play action(s) for {galeGame.DisplayName} ({appId}).");
+
+            return profiles
+                .Select(profile => GaleLauncher.BuildPlayController(game, executable, galeGame.GaleSlug, profile))
+                .ToList();
         }
 
         private string GetPluginInstallPath()

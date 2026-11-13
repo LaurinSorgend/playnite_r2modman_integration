@@ -26,6 +26,19 @@
             </StackPanel>
             <TextBlock Text="{Binding ScanStatus}" TextWrapping="Wrap" Margin="0,0,0,12" FontStyle="Italic"/>
 
+            <TextBlock Text="Gale" FontWeight="Bold" Margin="0,12,0,4"/>
+            <CheckBox Content="Add play actions for Gale profiles (launched through Gale's CLI)"
+                      IsChecked="{Binding Settings.EnableGale}"
+                      Margin="0,4"/>
+            <TextBlock Text="Gale data folder override (leave empty for default %AppData%\com.kesomannen.gale):"
+                       Margin="0,8,0,4"/>
+            <TextBox Text="{Binding Settings.GaleDataFolderOverride, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,0,0,8"/>
+            <TextBlock Text="Gale executable (leave empty to search the installer, MSI and scoop locations):"
+                       Margin="0,0,0,4"/>
+            <TextBox Text="{Binding Settings.GaleExecutableOverride, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,0,0,12"/>
+
             <TextBlock Text="User mapping overrides (Steam AppId → r2modman folder name):"
                        FontWeight="Bold" Margin="0,12,0,4"/>
             <TextBlock Text="Add entries here for games not in the bundled list, or to override an existing one. Tick 'Disabled' to suppress injection for that AppId."

@@ -25,10 +25,16 @@ namespace PlayniteR2modman
     {
         private bool enableInjection = true;
         private string dataFolderOverride = string.Empty;
+        private bool enableGale = true;
+        private string galeDataFolderOverride = string.Empty;
+        private string galeExecutableOverride = string.Empty;
         private ObservableCollection<UserMappingEntry> userMappings = new ObservableCollection<UserMappingEntry>();
 
         public bool EnableInjection { get => enableInjection; set => SetValue(ref enableInjection, value); }
         public string DataFolderOverride { get => dataFolderOverride; set => SetValue(ref dataFolderOverride, value); }
+        public bool EnableGale { get => enableGale; set => SetValue(ref enableGale, value); }
+        public string GaleDataFolderOverride { get => galeDataFolderOverride; set => SetValue(ref galeDataFolderOverride, value); }
+        public string GaleExecutableOverride { get => galeExecutableOverride; set => SetValue(ref galeExecutableOverride, value); }
         public ObservableCollection<UserMappingEntry> UserMappings { get => userMappings; set => SetValue(ref userMappings, value); }
 
         public Dictionary<string, UserMappingOverride> BuildOverrideMap() =>
@@ -118,8 +124,29 @@ namespace PlayniteR2modman
             {
                 errors.Add($"Data folder override: {folderError}");
             }
+            ValidateGale(errors);
             ValidateMappings(errors);
             return errors.Count == 0;
+        }
+
+        private void ValidateGale(List<string> errors)
+        {
+            if (!GaleScanner.TryResolveDataFolder(Settings.GaleDataFolderOverride, out _, out var folderError))
+            {
+                errors.Add($"Gale data folder override: {folderError}");
+            }
+            if (string.IsNullOrWhiteSpace(Settings.GaleExecutableOverride))
+            {
+                return;
+            }
+            if (!PathResolver.TryResolve(Settings.GaleExecutableOverride, null, out var exe, out var exeError))
+            {
+                errors.Add($"Gale executable: {exeError}");
+            }
+            else if (!System.IO.File.Exists(exe))
+            {
+                errors.Add($"Gale executable: '{exe}' does not exist.");
+            }
         }
 
         private void ValidateMappings(List<string> errors)

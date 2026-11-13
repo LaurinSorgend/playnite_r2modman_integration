@@ -41,33 +41,8 @@ namespace PlayniteR2modman
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "r2modmanPlus-local");
 
         /// <summary>Resolves a user-supplied data folder, reporting why it is unusable instead of throwing.</summary>
-        public static bool TryResolveDataFolder(string dataFolder, out string resolved, out string error)
-        {
-            error = null;
-            if (string.IsNullOrWhiteSpace(dataFolder))
-            {
-                resolved = DefaultDataFolder;
-                return true;
-            }
-
-            resolved = null;
-            var trimmed = dataFolder.Trim().Trim('"');
-            try
-            {
-                if (!Path.IsPathRooted(trimmed))
-                {
-                    error = $"'{trimmed}' is not an absolute path.";
-                    return false;
-                }
-                resolved = Path.GetFullPath(trimmed);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                error = $"'{trimmed}' is not a usable folder path: {ex.Message}";
-                return false;
-            }
-        }
+        public static bool TryResolveDataFolder(string dataFolder, out string resolved, out string error) =>
+            PathResolver.TryResolve(dataFolder, DefaultDataFolder, out resolved, out error);
 
         public static bool IsValidFolderName(string name) =>
             !string.IsNullOrWhiteSpace(name) && name.IndexOfAny(Path.GetInvalidFileNameChars()) < 0;

@@ -49,7 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoorstopLaunchBuilder.cs" />
+    <Compile Include="GaleGameCatalog.cs" />
+    <Compile Include="GaleLauncher.cs" />
+    <Compile Include="GaleScanner.cs" />
     <Compile Include="GameMappingStore.cs" />
+    <Compile Include="PathResolver.cs" />
     <Compile Include="PlayniteR2modman.cs" />
     <Compile Include="PlayniteR2modmanSettings.cs" />
     <Compile Include="PlayniteR2modmanSettingsView.xaml.cs">
@@ -60,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\r2modman_games.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\gale_games.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
