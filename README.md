@@ -1,8 +1,8 @@
 # Playnite r2modman integration
 
-Playnite plugin that adds launch entries for [r2modman](https://r2modman.com/) profiles when you click Play on a supported Steam game. Profiles are read live from disk, no config to keep in sync.
+Playnite plugin that adds launch entries for [r2modman](https://r2modman.com/) and [Gale](https://github.com/Kesomannen/gale) profiles when you click Play on a supported Steam game. Profiles are read live from disk, no config to keep in sync.
 
-Status: WIP. Covers BepInEx games on Steam.
+Status: WIP. r2modman entries cover BepInEx games on Steam. Gale entries run `gale.exe --game <slug> --profile <name> --launch`, so they work for any loader Gale supports.
 
 ## Build
 
@@ -25,10 +25,15 @@ Dev build: Playnite → **Settings → For developers → External extensions** 
 
 ## Adding games
 
-The bundled list at `src/PlayniteR2modman/Resources/r2modman_games.json` is generated from r2modman's upstream `ecosystem.json`. To regenerate:
+The bundled lists in `src/PlayniteR2modman/Resources/` are generated from upstream: `r2modman_games.json` from r2modman's `ecosystem.json`, `gale_games.json` from Gale's `games.json`. To regenerate:
 
 ```bash
 python scripts/update_game_mappings.py
+python scripts/update_gale_game_mappings.py
 ```
 
-CI re-runs this daily and fails if the bundled file drifts. For a one-off, just add a settings override row.
+CI re-runs both daily and commits any changes to `main`. For a one-off r2modman game, add a settings override row.
+
+## Gale
+
+Gale keeps profiles in `%AppData%\com.kesomannen.gale\<slug>\profiles\`. The plugin looks for `gale.exe` in the per-user installer folder, `Program Files\Gale` and scoop. If yours is elsewhere, or you moved Gale's data folder, set the paths in the plugin settings.

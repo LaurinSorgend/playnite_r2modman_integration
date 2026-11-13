@@ -1,5 +1,14 @@
 AddonId: 'PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1'
 Packages:
+  - Version: 0.3.0
+    RequiredApiVersion: 6.15.0
+    ReleaseDate: 2026-11-13
+    PackageUrl: https://github.com/LaurinSorgend/playnite_r2modman_integration/releases/download/v0.3.0/PlayniteR2modman_66e5c414-0820-4919-be6d-3179c4013fc1_0_3_0.pext
+    Changelog:
+      - Add launch options for Gale profiles, started through Gale's command line
+      - Gale settings for the data folder and gale.exe location, with auto-detection of installer, MSI and scoop installs
+      - Disabling a game in the mapping table now hides its Gale entries too
+      - Project moved from Codeberg to GitHub
   - Version: 0.2.0
     RequiredApiVersion: 6.15.0
     ReleaseDate: 2026-08-02
