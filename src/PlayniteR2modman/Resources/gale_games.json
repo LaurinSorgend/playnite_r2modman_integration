@@ -1,0 +1,1207 @@
+[
+  {
+    "steamAppId": "227860",
+    "galeSlug": "castle-story",
+    "displayName": "Castle Story"
+  },
+  {
+    "steamAppId": "233610",
+    "galeSlug": "distance",
+    "displayName": "Distance"
+  },
+  {
+    "steamAppId": "252870",
+    "galeSlug": "pulsar-lost-colony",
+    "displayName": "Pulsar: Lost Colony"
+  },
+  {
+    "steamAppId": "264710",
+    "galeSlug": "subnautica",
+    "displayName": "Subnautica"
+  },
+  {
+    "steamAppId": "268750",
+    "galeSlug": "magicite",
+    "displayName": "Magicite"
+  },
+  {
+    "steamAppId": "268910",
+    "galeSlug": "cuphead",
+    "displayName": "Cuphead"
+  },
+  {
+    "steamAppId": "283160",
+    "galeSlug": "hotds",
+    "displayName": "House of the Dying Sun"
+  },
+  {
+    "steamAppId": "285900",
+    "galeSlug": "gang-beasts",
+    "displayName": "Gang Beasts"
+  },
+  {
+    "steamAppId": "311690",
+    "galeSlug": "enter-the-gungeon",
+    "displayName": "Enter the Gungeon"
+  },
+  {
+    "steamAppId": "322500",
+    "galeSlug": "superhot",
+    "displayName": "SUPERHOT"
+  },
+  {
+    "steamAppId": "361420",
+    "galeSlug": "astroneer",
+    "displayName": "Astroneer"
+  },
+  {
+    "steamAppId": "382560",
+    "galeSlug": "hot-lava",
+    "displayName": "Hot Lava"
+  },
+  {
+    "steamAppId": "384490",
+    "galeSlug": "necropolis",
+    "displayName": "Necropolis"
+  },
+  {
+    "steamAppId": "386940",
+    "galeSlug": "ultimate-chicken-horse",
+    "displayName": "Ultimate Chicken Horse"
+  },
+  {
+    "steamAppId": "440310",
+    "galeSlug": "project-arrhythmia",
+    "displayName": "Project Arrhythmia"
+  },
+  {
+    "steamAppId": "445980",
+    "galeSlug": "wizard-of-legend",
+    "displayName": "Wizard of Legend"
+  },
+  {
+    "steamAppId": "450540",
+    "galeSlug": "h3vr",
+    "displayName": "H3VR"
+  },
+  {
+    "steamAppId": "477160",
+    "galeSlug": "human-fall-flat",
+    "displayName": "Human Fall Flat"
+  },
+  {
+    "steamAppId": "493520",
+    "galeSlug": "gtfo",
+    "displayName": "GTFO"
+  },
+  {
+    "steamAppId": "508440",
+    "galeSlug": "totally-accurate-battle-simulator",
+    "displayName": "TABS"
+  },
+  {
+    "steamAppId": "519860",
+    "galeSlug": "dusk",
+    "displayName": "DUSK"
+  },
+  {
+    "steamAppId": "527230",
+    "galeSlug": "for-the-king",
+    "displayName": "For The King"
+  },
+  {
+    "steamAppId": "544750",
+    "galeSlug": "soulcalibur-vi",
+    "displayName": "SOULCALIBUR VI"
+  },
+  {
+    "steamAppId": "553310",
+    "galeSlug": "lethal-league-blaze",
+    "displayName": "Lethal League Blaze"
+  },
+  {
+    "steamAppId": "572890",
+    "galeSlug": "pikuniku",
+    "displayName": "Pikuniku"
+  },
+  {
+    "steamAppId": "577690",
+    "galeSlug": "jump-scare-mansion",
+    "displayName": "Spooky's Jump Scare Mansion: HD Renovation"
+  },
+  {
+    "steamAppId": "580720",
+    "galeSlug": "carrier-deck",
+    "displayName": "Carrier Deck"
+  },
+  {
+    "steamAppId": "597220",
+    "galeSlug": "west-of-loathing",
+    "displayName": "West of Loathing"
+  },
+  {
+    "steamAppId": "605230",
+    "galeSlug": "grey-hack",
+    "displayName": "Grey Hack"
+  },
+  {
+    "steamAppId": "632360",
+    "galeSlug": "riskofrain2",
+    "displayName": "Risk of Rain 2"
+  },
+  {
+    "steamAppId": "632470",
+    "galeSlug": "disco-elysium",
+    "displayName": "Disco Elysium"
+  },
+  {
+    "steamAppId": "636480",
+    "galeSlug": "ravenfield",
+    "displayName": "Ravenfield"
+  },
+  {
+    "steamAppId": "653530",
+    "galeSlug": "return-of-the-obra-dinn",
+    "displayName": "Return of the Obra Dinn"
+  },
+  {
+    "steamAppId": "667970",
+    "galeSlug": "vtol-vr",
+    "displayName": "VTOL VR"
+  },
+  {
+    "steamAppId": "688420",
+    "galeSlug": "bad-north",
+    "displayName": "Bad North"
+  },
+  {
+    "steamAppId": "720620",
+    "galeSlug": "talespire",
+    "displayName": "TaleSpire"
+  },
+  {
+    "steamAppId": "757320",
+    "galeSlug": "atomicrops",
+    "displayName": "Atomicrops"
+  },
+  {
+    "steamAppId": "774181",
+    "galeSlug": "rhythm-doctor",
+    "displayName": "Rhythm Doctor"
+  },
+  {
+    "steamAppId": "794260",
+    "galeSlug": "outward",
+    "displayName": "Outward"
+  },
+  {
+    "steamAppId": "823500",
+    "galeSlug": "boneworks",
+    "displayName": "BONEWORKS"
+  },
+  {
+    "steamAppId": "843390",
+    "galeSlug": "vertigo-2",
+    "displayName": "Vertigo 2"
+  },
+  {
+    "steamAppId": "848450",
+    "galeSlug": "subnautica-below-zero",
+    "displayName": "Subnautica: Below Zero"
+  },
+  {
+    "steamAppId": "867210",
+    "galeSlug": "songs-of-conquest",
+    "displayName": "Songs of Conquest"
+  },
+  {
+    "steamAppId": "890550",
+    "galeSlug": "rumble",
+    "displayName": "RUMBLE"
+  },
+  {
+    "steamAppId": "892970",
+    "galeSlug": "valheim",
+    "displayName": "Valheim"
+  },
+  {
+    "steamAppId": "900010",
+    "galeSlug": "meeple-station",
+    "displayName": "Meeple Station"
+  },
+  {
+    "steamAppId": "917950",
+    "galeSlug": "vellum",
+    "displayName": "Vellum"
+  },
+  {
+    "steamAppId": "945360",
+    "galeSlug": "among-us",
+    "displayName": "Among Us"
+  },
+  {
+    "steamAppId": "949230",
+    "galeSlug": "cities-skylines-ii",
+    "displayName": "Cities: Skylines II"
+  },
+  {
+    "steamAppId": "960090",
+    "galeSlug": "bloons-td-6",
+    "displayName": "Bloons TD 6"
+  },
+  {
+    "steamAppId": "986130",
+    "galeSlug": "shadows-of-doubt",
+    "displayName": "Shadows of Doubt"
+  },
+  {
+    "steamAppId": "1022980",
+    "galeSlug": "ostranauts",
+    "displayName": "Ostranauts"
+  },
+  {
+    "steamAppId": "1030300",
+    "galeSlug": "hollow-knight-silksong",
+    "displayName": "Hollow Knight: Silksong"
+  },
+  {
+    "steamAppId": "1054340",
+    "galeSlug": "logic-world",
+    "displayName": "Logic World"
+  },
+  {
+    "steamAppId": "1059990",
+    "galeSlug": "trombone-champ",
+    "displayName": "Trombone Champ"
+  },
+  {
+    "steamAppId": "1062090",
+    "galeSlug": "timberborn",
+    "displayName": "Timberborn"
+  },
+  {
+    "steamAppId": "1063420",
+    "galeSlug": "void-crew",
+    "displayName": "Void Crew"
+  },
+  {
+    "steamAppId": "1085510",
+    "galeSlug": "garfield-kart-furious-racing",
+    "displayName": "Garfield Kart - Furious Racing"
+  },
+  {
+    "steamAppId": "1091320",
+    "galeSlug": "depo",
+    "displayName": "DEPO : Death Epileptic Pixel Origins"
+  },
+  {
+    "steamAppId": "1092790",
+    "galeSlug": "inscryption",
+    "displayName": "Inscryption"
+  },
+  {
+    "steamAppId": "1125240",
+    "galeSlug": "ancient-dungeon-vr",
+    "displayName": "Ancient Dungeon VR"
+  },
+  {
+    "steamAppId": "1125390",
+    "galeSlug": "atrio-the-dark-wild",
+    "displayName": "Atrio: The Dark Wild"
+  },
+  {
+    "steamAppId": "1129310",
+    "galeSlug": "receiver-2",
+    "displayName": "Receiver 2"
+  },
+  {
+    "steamAppId": "1140150",
+    "galeSlug": "touhou-lost-branch-of-legend",
+    "displayName": "TouhouLostBranchOfLegend"
+  },
+  {
+    "steamAppId": "1145350",
+    "galeSlug": "hades-ii",
+    "displayName": "Hades II"
+  },
+  {
+    "steamAppId": "1147560",
+    "galeSlug": "skul-the-hero-slayer",
+    "displayName": "Skul: The Hero Slayer"
+  },
+  {
+    "steamAppId": "1150530",
+    "galeSlug": "wizard-with-a-gun",
+    "displayName": "Wizard With A Gun"
+  },
+  {
+    "steamAppId": "1150760",
+    "galeSlug": "gloomwood",
+    "displayName": "Gloomwood"
+  },
+  {
+    "steamAppId": "1170230",
+    "galeSlug": "below-the-stone",
+    "displayName": "Below the Stone"
+  },
+  {
+    "steamAppId": "1188080",
+    "galeSlug": "cats-are-liquid",
+    "displayName": "Cats are Liquid - A Better Place"
+  },
+  {
+    "steamAppId": "1188930",
+    "galeSlug": "chrono-ark",
+    "displayName": "Chrono Ark"
+  },
+  {
+    "steamAppId": "1205040",
+    "galeSlug": "granny-chapter-two",
+    "displayName": "Granny: Chapter 2"
+  },
+  {
+    "steamAppId": "1210320",
+    "galeSlug": "potion-craft",
+    "displayName": "Potion Craft"
+  },
+  {
+    "steamAppId": "1211020",
+    "galeSlug": "wobbly-life",
+    "displayName": "Wobbly Life"
+  },
+  {
+    "steamAppId": "1226990",
+    "galeSlug": "mechanica",
+    "displayName": "Mechanica"
+  },
+  {
+    "steamAppId": "1229490",
+    "galeSlug": "ultrakill",
+    "displayName": "ULTRAKILL"
+  },
+  {
+    "steamAppId": "1237970",
+    "galeSlug": "northstar",
+    "displayName": "Titanfall 2: Northstar"
+  },
+  {
+    "steamAppId": "1268900",
+    "galeSlug": "nearly-dead",
+    "displayName": "Nearly Dead"
+  },
+  {
+    "steamAppId": "1279510",
+    "galeSlug": "screw-drivers",
+    "displayName": "Screw Drivers"
+  },
+  {
+    "steamAppId": "1284190",
+    "galeSlug": "the-planet-crafter",
+    "displayName": "The Planet Crafter"
+  },
+  {
+    "steamAppId": "1294760",
+    "galeSlug": "hard-bullet",
+    "displayName": "Hard Bullet"
+  },
+  {
+    "steamAppId": "1296610",
+    "galeSlug": "peglin",
+    "displayName": "Peglin"
+  },
+  {
+    "steamAppId": "1302240",
+    "galeSlug": "labyrinthine",
+    "displayName": "Labyrinthine"
+  },
+  {
+    "steamAppId": "1310330",
+    "galeSlug": "goodbye-volcano-high",
+    "displayName": "Goodbye Volcano High"
+  },
+  {
+    "steamAppId": "1313140",
+    "galeSlug": "cult-of-the-lamb",
+    "displayName": "Cult of the Lamb"
+  },
+  {
+    "steamAppId": "1326470",
+    "galeSlug": "sons-of-the-forest",
+    "displayName": "Sons Of The Forest"
+  },
+  {
+    "steamAppId": "1330000",
+    "galeSlug": "stolen-realm",
+    "displayName": "Stolen Realm"
+  },
+  {
+    "steamAppId": "1331550",
+    "galeSlug": "big-ambitions",
+    "displayName": "Big Ambitions"
+  },
+  {
+    "steamAppId": "1335830",
+    "galeSlug": "lens-island",
+    "displayName": "Len's Island"
+  },
+  {
+    "steamAppId": "1336490",
+    "galeSlug": "against-the-storm",
+    "displayName": "Against the Storm"
+  },
+  {
+    "steamAppId": "1337520",
+    "galeSlug": "risk-of-rain-returns",
+    "displayName": "Risk Of Rain Returns"
+  },
+  {
+    "steamAppId": "1347970",
+    "galeSlug": "patch-quest",
+    "displayName": "Patch Quest"
+  },
+  {
+    "steamAppId": "1353230",
+    "galeSlug": "bomb-rush-cyberfunk",
+    "displayName": "Bomb Rush Cyberfunk"
+  },
+  {
+    "steamAppId": "1366540",
+    "galeSlug": "dyson-sphere-program",
+    "displayName": "Dyson Sphere Program"
+  },
+  {
+    "steamAppId": "1380220",
+    "galeSlug": "starsand",
+    "displayName": "Starsand"
+  },
+  {
+    "steamAppId": "1385380",
+    "galeSlug": "across-the-obelisk",
+    "displayName": "Across the Obelisk"
+  },
+  {
+    "steamAppId": "1409160",
+    "galeSlug": "plasma",
+    "displayName": "Plasma"
+  },
+  {
+    "steamAppId": "1414850",
+    "galeSlug": "nasb",
+    "displayName": "Nickelodeon All-Star Brawl"
+  },
+  {
+    "steamAppId": "1432860",
+    "galeSlug": "sun-haven",
+    "displayName": "Sun Haven"
+  },
+  {
+    "steamAppId": "1447350",
+    "galeSlug": "arcus-chroma",
+    "displayName": "Arcus Chroma"
+  },
+  {
+    "steamAppId": "1448840",
+    "galeSlug": "very-very-valet",
+    "displayName": "Very Very Valet"
+  },
+  {
+    "steamAppId": "1457320",
+    "galeSlug": "techtonica",
+    "displayName": "Techtonica"
+  },
+  {
+    "steamAppId": "1478500",
+    "galeSlug": "big-walk",
+    "displayName": "Big Walk"
+  },
+  {
+    "steamAppId": "1488490",
+    "galeSlug": "nivalis-nights",
+    "displayName": "Nivalis Nights"
+  },
+  {
+    "steamAppId": "1533390",
+    "galeSlug": "gorilla-tag",
+    "displayName": "Gorilla Tag"
+  },
+  {
+    "steamAppId": "1557740",
+    "galeSlug": "rounds",
+    "displayName": "ROUNDS"
+  },
+  {
+    "steamAppId": "1562430",
+    "galeSlug": "dredge",
+    "displayName": "DREDGE"
+  },
+  {
+    "steamAppId": "1584840",
+    "galeSlug": "against",
+    "displayName": "AGAINST"
+  },
+  {
+    "steamAppId": "1592190",
+    "galeSlug": "bonelab",
+    "displayName": "BONELAB"
+  },
+  {
+    "steamAppId": "1604030",
+    "galeSlug": "v-rising",
+    "displayName": "V Rising"
+  },
+  {
+    "steamAppId": "1620340",
+    "galeSlug": "wrestling-empire",
+    "displayName": "Wrestling Empire"
+  },
+  {
+    "steamAppId": "1621690",
+    "galeSlug": "core-keeper",
+    "displayName": "Core Keeper"
+  },
+  {
+    "steamAppId": "1623730",
+    "galeSlug": "palworld",
+    "displayName": "Palworld"
+  },
+  {
+    "steamAppId": "1625450",
+    "galeSlug": "muck",
+    "displayName": "Muck"
+  },
+  {
+    "steamAppId": "1628610",
+    "galeSlug": "paquerette-down-the-bunburrows",
+    "displayName": "Paquerette Down the Bunburrows"
+  },
+  {
+    "steamAppId": "1686940",
+    "galeSlug": "bopl-battle",
+    "displayName": "Bopl Battle"
+  },
+  {
+    "steamAppId": "1730700",
+    "galeSlug": "we-love-katamari-reroll-royal-reverie",
+    "displayName": "We Love Katamari REROLL+ Royal Reverie"
+  },
+  {
+    "steamAppId": "1735700",
+    "galeSlug": "back-to-the-dawn",
+    "displayName": "Back to the Dawn"
+  },
+  {
+    "steamAppId": "1740300",
+    "galeSlug": "smushi-come-home",
+    "displayName": "Smushi Come Home"
+  },
+  {
+    "steamAppId": "1745680",
+    "galeSlug": "odd-remedy",
+    "displayName": "Odd Remedy"
+  },
+  {
+    "steamAppId": "1757300",
+    "galeSlug": "jump-space",
+    "displayName": "Jump Space"
+  },
+  {
+    "steamAppId": "1764530",
+    "galeSlug": "sailwind",
+    "displayName": "Sailwind"
+  },
+  {
+    "steamAppId": "1782210",
+    "galeSlug": "crab-game",
+    "displayName": "Crab Game"
+  },
+  {
+    "steamAppId": "1782330",
+    "galeSlug": "green-hell-vr",
+    "displayName": "Green Hell VR"
+  },
+  {
+    "steamAppId": "1787860",
+    "galeSlug": "crawlspace",
+    "displayName": "Crawlspace"
+  },
+  {
+    "steamAppId": "1809540",
+    "galeSlug": "nine-sols",
+    "displayName": "Nine Sols"
+  },
+  {
+    "steamAppId": "1811990",
+    "galeSlug": "wildfrost",
+    "displayName": "Wildfrost"
+  },
+  {
+    "steamAppId": "1843760",
+    "galeSlug": "rogue-tower",
+    "displayName": "Rogue Tower"
+  },
+  {
+    "steamAppId": "1876590",
+    "galeSlug": "i-am-your-beast",
+    "displayName": "I Am Your Beast"
+  },
+  {
+    "steamAppId": "1887840",
+    "galeSlug": "another-crabs-treasure",
+    "displayName": "Another Crab's Treasure"
+  },
+  {
+    "steamAppId": "1898300",
+    "galeSlug": "aska",
+    "displayName": "ASKA"
+  },
+  {
+    "steamAppId": "1905940",
+    "galeSlug": "painting-vr",
+    "displayName": "Painting VR"
+  },
+  {
+    "steamAppId": "1931180",
+    "galeSlug": "lost-skies",
+    "displayName": "Lost Skies"
+  },
+  {
+    "steamAppId": "1939160",
+    "galeSlug": "shadows-over-loathing",
+    "displayName": "Shadows Over Loathing"
+  },
+  {
+    "steamAppId": "1948280",
+    "galeSlug": "stacklands",
+    "displayName": "Stacklands"
+  },
+  {
+    "steamAppId": "1966720",
+    "galeSlug": "lethal-company",
+    "displayName": "Lethal Company"
+  },
+  {
+    "steamAppId": "1966900",
+    "galeSlug": "20-minutes-till-dawn",
+    "displayName": "20 Minutes Till Dawn"
+  },
+  {
+    "steamAppId": "1967630",
+    "galeSlug": "sfoy",
+    "displayName": "Survival: Fountain of Youth"
+  },
+  {
+    "steamAppId": "1970580",
+    "galeSlug": "backpack-hero",
+    "displayName": "Backpack Hero"
+  },
+  {
+    "steamAppId": "1982120",
+    "galeSlug": "paper-animal-adventure",
+    "displayName": "Paper Animal Adventure"
+  },
+  {
+    "steamAppId": "1987080",
+    "galeSlug": "inside-the-backrooms",
+    "displayName": "Inside The Backrooms"
+  },
+  {
+    "steamAppId": "2027330",
+    "galeSlug": "gorebox",
+    "displayName": "GoreBox"
+  },
+  {
+    "steamAppId": "2051980",
+    "galeSlug": "aloft",
+    "displayName": "Aloft"
+  },
+  {
+    "steamAppId": "2060160",
+    "galeSlug": "the-farmer-was-replaced",
+    "displayName": "The Farmer Was Replaced"
+  },
+  {
+    "steamAppId": "2067920",
+    "galeSlug": "rogue-genesia",
+    "displayName": "Rogue : Genesia"
+  },
+  {
+    "steamAppId": "2080690",
+    "galeSlug": "sunkenland",
+    "displayName": "Sunkenland"
+  },
+  {
+    "steamAppId": "2096510",
+    "galeSlug": "the-ouroboros-king",
+    "displayName": "The Ouroboros King"
+  },
+  {
+    "steamAppId": "2102670",
+    "galeSlug": "lost-skies-ic",
+    "displayName": "Lost Skies Island Creator"
+  },
+  {
+    "steamAppId": "2103140",
+    "galeSlug": "magicraft",
+    "displayName": "Magicraft"
+  },
+  {
+    "steamAppId": "2106670",
+    "galeSlug": "gatekeeper",
+    "displayName": "Gatekeeper"
+  },
+  {
+    "steamAppId": "2124120",
+    "galeSlug": "sulfur",
+    "displayName": "SULFUR"
+  },
+  {
+    "steamAppId": "2134320",
+    "galeSlug": "ena-dream-bbq",
+    "displayName": "ENA: Dream BBQ"
+  },
+  {
+    "steamAppId": "2162800",
+    "galeSlug": "shapez-2",
+    "displayName": "Shapez 2"
+  },
+  {
+    "steamAppId": "2200780",
+    "galeSlug": "my-dream-setup",
+    "displayName": "My Dream Setup"
+  },
+  {
+    "steamAppId": "2216960",
+    "galeSlug": "super-psycho-baseball",
+    "displayName": "Super Psycho Baseball"
+  },
+  {
+    "steamAppId": "2236070",
+    "galeSlug": "peaks-of-yore",
+    "displayName": "Peaks of Yore"
+  },
+  {
+    "steamAppId": "2239150",
+    "galeSlug": "thronefall",
+    "displayName": "Thronefall"
+  },
+  {
+    "steamAppId": "2258670",
+    "galeSlug": "crawlspace-2",
+    "displayName": "Crawlspace 2"
+  },
+  {
+    "steamAppId": "2286780",
+    "galeSlug": "aeruta",
+    "displayName": "Aeruta"
+  },
+  {
+    "steamAppId": "2289750",
+    "galeSlug": "super-fantasy-kingdom",
+    "displayName": "Super Fantasy Kingdom"
+  },
+  {
+    "steamAppId": "2295170",
+    "galeSlug": "emberville",
+    "displayName": "Emberville"
+  },
+  {
+    "steamAppId": "2318480",
+    "galeSlug": "last-train-outta-wormtown",
+    "displayName": "Last Train Outta' Wormtown"
+  },
+  {
+    "steamAppId": "2321470",
+    "galeSlug": "deep-rock-galactic-survivor",
+    "displayName": "Deep Rock Galactic: Survivor"
+  },
+  {
+    "steamAppId": "2379780",
+    "galeSlug": "balatro",
+    "displayName": "Balatro"
+  },
+  {
+    "steamAppId": "2382520",
+    "galeSlug": "erenshor",
+    "displayName": "Erenshor"
+  },
+  {
+    "steamAppId": "2383200",
+    "galeSlug": "patapon-1-2-replay",
+    "displayName": "PATAPON 1+2 REPLAY"
+  },
+  {
+    "steamAppId": "2386720",
+    "galeSlug": "straftat",
+    "displayName": "STRAFTAT"
+  },
+  {
+    "steamAppId": "2472840",
+    "galeSlug": "ducks-can-drive",
+    "displayName": "Ducks Can Drive"
+  },
+  {
+    "steamAppId": "2503770",
+    "galeSlug": "house-of-legacy",
+    "displayName": "House of Legacy"
+  },
+  {
+    "steamAppId": "2519830",
+    "galeSlug": "resonite",
+    "displayName": "Resonite"
+  },
+  {
+    "steamAppId": "2527500",
+    "galeSlug": "miside",
+    "displayName": "MiSide"
+  },
+  {
+    "steamAppId": "2564910",
+    "galeSlug": "cryo",
+    "displayName": "Cryo"
+  },
+  {
+    "steamAppId": "2587450",
+    "galeSlug": "tank-team",
+    "displayName": "Tank Team"
+  },
+  {
+    "steamAppId": "2596100",
+    "galeSlug": "lycans",
+    "displayName": "Lycans"
+  },
+  {
+    "steamAppId": "2638370",
+    "galeSlug": "five-nights-at-freddys-into-the-pit",
+    "displayName": "Five Nights at Freddy's: Into the Pit"
+  },
+  {
+    "steamAppId": "2643810",
+    "galeSlug": "betrayal-beach",
+    "displayName": "Betrayal Beach"
+  },
+  {
+    "steamAppId": "2683150",
+    "galeSlug": "ale-and-tale-tavern",
+    "displayName": "Ale & Tale Tavern"
+  },
+  {
+    "steamAppId": "2695940",
+    "galeSlug": "panicore",
+    "displayName": "Panicore"
+  },
+  {
+    "steamAppId": "2709570",
+    "galeSlug": "supermarket-together",
+    "displayName": "Supermarket Together"
+  },
+  {
+    "steamAppId": "2737070",
+    "galeSlug": "crime-simulator",
+    "displayName": "Crime Simulator"
+  },
+  {
+    "steamAppId": "2742830",
+    "galeSlug": "monster-train-2",
+    "displayName": "Monster Train 2"
+  },
+  {
+    "steamAppId": "2748340",
+    "galeSlug": "goblin-cleanup",
+    "displayName": "Goblin Cleanup"
+  },
+  {
+    "steamAppId": "2765860",
+    "galeSlug": "slipstream-rogue-space",
+    "displayName": "Slipstream: Rogue Space"
+  },
+  {
+    "steamAppId": "2768430",
+    "galeSlug": "atlyss",
+    "displayName": "ATLYSS"
+  },
+  {
+    "steamAppId": "2773280",
+    "galeSlug": "aneurism-iv",
+    "displayName": "ANEURISM IV"
+  },
+  {
+    "steamAppId": "2784470",
+    "galeSlug": "9-kings",
+    "displayName": "9 Kings"
+  },
+  {
+    "steamAppId": "2820700",
+    "galeSlug": "a-gentlemens-dispute",
+    "displayName": "A Gentlemen's Dispute"
+  },
+  {
+    "steamAppId": "2827200",
+    "galeSlug": "mimesis",
+    "displayName": "MIMESIS"
+  },
+  {
+    "steamAppId": "2846060",
+    "galeSlug": "subterror",
+    "displayName": "Subterror"
+  },
+  {
+    "steamAppId": "2878420",
+    "galeSlug": "old-market-simulator",
+    "displayName": "Old Market Simulator"
+  },
+  {
+    "steamAppId": "2881650",
+    "galeSlug": "content-warning",
+    "displayName": "Content Warning"
+  },
+  {
+    "steamAppId": "2904000",
+    "galeSlug": "the-spell-brigade",
+    "displayName": "The Spell Brigade"
+  },
+  {
+    "steamAppId": "2908480",
+    "galeSlug": "gladio-mori",
+    "displayName": "Gladio Mori"
+  },
+  {
+    "steamAppId": "2919990",
+    "galeSlug": "an-unfinished-game",
+    "displayName": "An Unfinished Game"
+  },
+  {
+    "steamAppId": "2929250",
+    "galeSlug": "over-the-hill",
+    "displayName": "over the hill"
+  },
+  {
+    "steamAppId": "3009850",
+    "galeSlug": "hard-time-3",
+    "displayName": "Hard Time III"
+  },
+  {
+    "steamAppId": "3011360",
+    "galeSlug": "primordialis",
+    "displayName": "Primordialis"
+  },
+  {
+    "steamAppId": "3041230",
+    "galeSlug": "windrose",
+    "displayName": "Windrose"
+  },
+  {
+    "steamAppId": "3070070",
+    "galeSlug": "tcg-card-shop-simulator",
+    "displayName": "TCG Card Shop Simulator"
+  },
+  {
+    "steamAppId": "3075800",
+    "galeSlug": "subterranauts",
+    "displayName": "Subterranauts"
+  },
+  {
+    "steamAppId": "3121110",
+    "galeSlug": "zort",
+    "displayName": "Zort"
+  },
+  {
+    "steamAppId": "3146520",
+    "galeSlug": "webfishing",
+    "displayName": "WEBFISHING"
+  },
+  {
+    "steamAppId": "3164500",
+    "galeSlug": "schedule-i",
+    "displayName": "Schedule I"
+  },
+  {
+    "steamAppId": "3195790",
+    "galeSlug": "white-knuckle",
+    "displayName": "White Knuckle"
+  },
+  {
+    "steamAppId": "3198680",
+    "galeSlug": "puttler",
+    "displayName": "Puttler"
+  },
+  {
+    "steamAppId": "3241660",
+    "galeSlug": "repo",
+    "displayName": "R.E.P.O."
+  },
+  {
+    "steamAppId": "3247750",
+    "galeSlug": "mycopunk",
+    "displayName": "Mycopunk"
+  },
+  {
+    "steamAppId": "3253530",
+    "galeSlug": "pit-of-goblin",
+    "displayName": "Pit of Goblin"
+  },
+  {
+    "steamAppId": "3293010",
+    "galeSlug": "easy-delivery-co",
+    "displayName": "Easy Delivery Co"
+  },
+  {
+    "steamAppId": "3314790",
+    "galeSlug": "clover-pit",
+    "displayName": "CloverPit"
+  },
+  {
+    "steamAppId": "3400930",
+    "galeSlug": "guilty-as-sock",
+    "displayName": "Guilty as Sock!"
+  },
+  {
+    "steamAppId": "3404470",
+    "galeSlug": "malteses-fluffy-onsen",
+    "displayName": "Maltese's Fluffy Onsen"
+  },
+  {
+    "steamAppId": "3405340",
+    "galeSlug": "megabonk",
+    "displayName": "Megabonk"
+  },
+  {
+    "steamAppId": "3438850",
+    "galeSlug": "sledding-game",
+    "displayName": "Sledding Game"
+  },
+  {
+    "steamAppId": "3527290",
+    "galeSlug": "peak",
+    "displayName": "PEAK"
+  },
+  {
+    "steamAppId": "3551340",
+    "galeSlug": "football-manager-26",
+    "displayName": "Football Manager 26"
+  },
+  {
+    "steamAppId": "3583210",
+    "galeSlug": "crashout-crew",
+    "displayName": "Crashout Crew"
+  },
+  {
+    "steamAppId": "3586660",
+    "galeSlug": "word-play",
+    "displayName": "Word Play"
+  },
+  {
+    "steamAppId": "3679930",
+    "galeSlug": "factory-planner",
+    "displayName": "Factory Planner"
+  },
+  {
+    "steamAppId": "3707400",
+    "galeSlug": "on-together",
+    "displayName": "On-Together: Virtual Co-Working"
+  },
+  {
+    "steamAppId": "3716600",
+    "galeSlug": "mage-arena",
+    "displayName": "Mage Arena"
+  },
+  {
+    "steamAppId": "3722330",
+    "galeSlug": "shift-at-midnight",
+    "displayName": "Shift At Midnight"
+  },
+  {
+    "steamAppId": "3743090",
+    "galeSlug": "deadly-delivery",
+    "displayName": "Deadly Delivery"
+  },
+  {
+    "steamAppId": "3746840",
+    "galeSlug": "pigface",
+    "displayName": "PIGFACE"
+  },
+  {
+    "steamAppId": "3817090",
+    "galeSlug": "vigil",
+    "displayName": "Vigil"
+  },
+  {
+    "steamAppId": "3821880",
+    "galeSlug": "beetleball",
+    "displayName": "Beetleball"
+  },
+  {
+    "steamAppId": "3834090",
+    "galeSlug": "yapyap",
+    "displayName": "YAPYAP"
+  },
+  {
+    "steamAppId": "3844970",
+    "galeSlug": "burglin-gnomes",
+    "displayName": "Burglin' Gnomes "
+  },
+  {
+    "steamAppId": "3846120",
+    "galeSlug": "mine-mogul",
+    "displayName": "MineMogul"
+  },
+  {
+    "steamAppId": "3856460",
+    "galeSlug": "cursed-words",
+    "displayName": "Cursed Words"
+  },
+  {
+    "steamAppId": "3892270",
+    "galeSlug": "gamble-with-your-friends",
+    "displayName": "Gamble With Your Friends"
+  },
+  {
+    "steamAppId": "3908940",
+    "galeSlug": "inferno-protocol",
+    "displayName": "Inferno Protocol"
+  },
+  {
+    "steamAppId": "3925760",
+    "galeSlug": "unfair-flips",
+    "displayName": "Unfair Flips"
+  },
+  {
+    "steamAppId": "3949040",
+    "galeSlug": "rv-there-yet",
+    "displayName": "RV There Yet?"
+  },
+  {
+    "steamAppId": "3971950",
+    "galeSlug": "in-falsus",
+    "displayName": "In Falsus"
+  },
+  {
+    "steamAppId": "4001890",
+    "galeSlug": "how-to-fish",
+    "displayName": "How to Fish"
+  },
+  {
+    "steamAppId": "4069520",
+    "galeSlug": "super-battle-golf",
+    "displayName": "Super Battle Golf"
+  },
+  {
+    "steamAppId": "4358690",
+    "galeSlug": "graveyard-keeper-2",
+    "displayName": "Graveyard Keeper 2"
+  },
+  {
+    "steamAppId": "4450620",
+    "galeSlug": "grain-rot",
+    "displayName": "Grain Rot"
+  },
+  {
+    "steamAppId": "4502710",
+    "galeSlug": "stonewards",
+    "displayName": "Stonewards"
+  },
+  {
+    "steamAppId": "4954910",
+    "galeSlug": "scam-with-your-friends",
+    "displayName": "Scam With Your Friends"
+  }
+]

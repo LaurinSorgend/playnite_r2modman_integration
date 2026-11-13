@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def fetch_ecosystem(url: str) -> dict:
+def fetch_json(url: str):
     with urllib.request.urlopen(url, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
@@ -59,16 +59,16 @@ def extract_bepinex_steam_games(ecosystem: dict) -> list[dict]:
     return rows
 
 
-def deduplicate_and_sort(rows: list[dict]) -> list[dict]:
+def deduplicate_and_sort(rows: list[dict], name_key: str = "r2modmanInternalName") -> list[dict]:
     """Keeps the first row per Steam AppId, dropping non-numeric ids so a bad
-    upstream entry cannot abort the whole run. Both cases are reported."""
+    upstream entry cannot abort the whole run. Both cases are reported, naming
+    each row by its `name_key` field."""
     by_app_id: dict[str, dict] = {}
     for row in rows:
         app_id = row["steamAppId"]
         if not (app_id.isascii() and app_id.isdigit()):
             print(
-                f"Skipping non-numeric Steam AppId {app_id!r} "
-                f"({row['r2modmanInternalName']!r})",
+                f"Skipping non-numeric Steam AppId {app_id!r} ({row[name_key]!r})",
                 file=sys.stderr,
             )
             continue
@@ -76,11 +76,23 @@ def deduplicate_and_sort(rows: list[dict]) -> list[dict]:
         if kept is not row:
             print(
                 f"Duplicate Steam AppId {app_id}: keeping "
-                f"{kept['r2modmanInternalName']!r}, dropping "
-                f"{row['r2modmanInternalName']!r}",
+                f"{kept[name_key]!r}, dropping {row[name_key]!r}",
                 file=sys.stderr,
             )
     return sorted(by_app_id.values(), key=lambda r: int(r["steamAppId"]))
+
+
+def write_rows(rows: list[dict], output: Path, label: str) -> int:
+    """Writes `rows` as stable LF-terminated JSON. Refuses an empty result so a
+    broken upstream cannot wipe the bundled file."""
+    if not rows:
+        print("Extracted zero entries - refusing to overwrite the bundle.", file=sys.stderr)
+        return 1
+    output.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(rows, indent=2, ensure_ascii=False) + "\n"
+    output.write_text(text, encoding="utf-8", newline="\n")
+    print(f"Wrote {len(rows)} {label} entries.", file=sys.stderr)
+    return 0
 
 
 def main() -> int:
@@ -88,18 +100,9 @@ def main() -> int:
     print(f"Source : {args.source_url}", file=sys.stderr)
     print(f"Output : {args.output}", file=sys.stderr)
 
-    ecosystem = fetch_ecosystem(args.source_url)
+    ecosystem = fetch_json(args.source_url)
     rows = deduplicate_and_sort(extract_bepinex_steam_games(ecosystem))
-
-    if not rows:
-        print("Extracted zero entries - refusing to overwrite the bundle.", file=sys.stderr)
-        return 1
-
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(rows, indent=2, ensure_ascii=False) + "\n"
-    args.output.write_text(text, encoding="utf-8", newline="\n")
-    print(f"Wrote {len(rows)} BepInEx Steam game entries.", file=sys.stderr)
-    return 0
+    return write_rows(rows, args.output, "BepInEx Steam game")
 
 
 if __name__ == "__main__":
