@@ -1200,6 +1200,11 @@
     "displayName": "Stonewards"
   },
   {
+    "steamAppId": "4576490",
+    "galeSlug": "casualties-unknown",
+    "displayName": "Casualties: Unknown"
+  },
+  {
     "steamAppId": "4954910",
     "galeSlug": "scam-with-your-friends",
     "displayName": "Scam With Your Friends"
